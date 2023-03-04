@@ -41,3 +41,25 @@ def load_subtitles(srt_file, db_file):
     f.close()
     print("written to file")
     return srt_file
+
+
+def get_embeddings(srt_file, db_file):
+    # Connect to the database
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the subtitles from the database
+    c.execute("SELECT start,end,text FROM subtitles WHERE srt_file = ? and embeddings='None'", (srt_file,))
+    subtitles = c.fetchall()
+    # Get the text of the subtitles
+    for time_start,time_end,sub_text in subtitles:
+        delayed_completion(delay_in_seconds=delay)
+        response = openai.Embedding.create(model="text-embedding-ada-002", input=sub_text)
+        embedding = response["data"][0]["embedding"]
+        c.execute("UPDATE subtitles SET embeddings = ? WHERE start = ? AND end = ? AND srt_file = ?", (json.dumps(embedding), time_start, time_end, srt_file))
+        # Commit the changes
+        conn.commit()
+        # print(format_time(time_end))
+    # Close the connection
+    conn.close()
+    print("Embedded meanings and associations found for every clip.")
+    print(" ...")
