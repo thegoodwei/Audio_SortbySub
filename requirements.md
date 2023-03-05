@@ -14,14 +14,17 @@ sudo python3 get-pip.py
 
 pip3 --version
 
+python3 -m venv main
+    
+source main/bin/activate
+    
 python3 -m pip install openai numpy wheel whisper torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
 
 apt install python3.10-venv
 
 sudo apt update
 
-python3 -m venv main
-    
-source main/bin/activate
-    
 main.py
+
+pip3 install openai numpy wheel whisper torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
+
