@@ -87,7 +87,7 @@ def setup(input_folder):
       create_srt_transcript(input_file: filepath, output_file: output_path, device: str = "cuda")
   
   
-def create_srt_transcript(input_file: str, device: str = "cuda"):
+def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda"):
     """
     Create an srt transcript from an audio file.
     Args:
@@ -97,10 +97,9 @@ def create_srt_transcript(input_file: str, device: str = "cuda"):
     Returns:
     None
     """
+    srt_file = output_file
     input_audio = input_file
-    #there used to be an 'with open' to create the file but I deleted it because errors 40 lines following btu it didnt fix
     print("creating audio file...")
-    # input_audio = input_file[:-4] + ".wav"
     # Convert the input file
     audio = AudioSegment.from_file(input_file, format=input_file.split(".")[-1])
     audio.export(input_audio, format="wav")
@@ -143,9 +142,8 @@ def create_srt_transcript(input_file: str, device: str = "cuda"):
         i+=1
      
     srt_text = (srt.make_legal_content(srt.compose(srt_transcript)))
-    f.close()
     print("Written to srt text as words aligned by timecode")
-
+    print(srt_text)
     subs = list(srt.parse(srt_text))
     combined_subs = []
     i = 0
