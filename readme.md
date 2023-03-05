@@ -1,4 +1,4 @@
-# Deductive Autocoding, 
+# Deductive Autocoding
 ## Autotranscription and Auto Categorization for Qualitative Data Analysis with .m4a audio
 This Python script is designed to automate the deductive coding of autotranscribed .m4a files for qualitative research analysis. The script uses OpenAI's text-embedding-ada-002 model to categorize subtitles into user-defined categories and writes the output to an .srt file.
 
