@@ -1,21 +1,21 @@
-# Deductive Autocoding
-### Autotranscription and Auto Categorization for Qualitative Data Analysis with .m4a audio
+# Audio to Auto-Transcript Embeddings to Categorized Subtitles
+### Qualitative Research Data from Deductive Prompting of an entire .m4a library
 
-This Python script is designed to automate the deductive coding of autotranscribed .m4a files for qualitative research analysis. The script uses OpenAI's text-embedding-ada-002 model to categorize subtitles into user-defined categories and writes the output to an .srt file. 
+This Python script is designed to automate the deductive research process from .m4a interview transcript analysis. It works by using the text-embedding model to compare a list of subtitles with categories can determine the most relevant category for each sentence.
 
-#### Purpose
-Qualitative research often involves the analysis of large amounts of audio data, which can be time-consuming and resource-intensive. This project presents an automated approach to categorizing autotranscribed audio files using OpenAI's text-embedding-ada-002 model. The approach involves converting audio files to text using automatic speech recognition (ASR) software, and then using the resulting text to categorize the audio based on user-defined categories. The resulting categorized subtitles are output as an SRT file, which can be used for further analysis. The script is in Beta and this approach will need be tested with results manually verified for acccuracy.
+### 
+Qualitative research requires the persistant analysis of vast amounts of audio data, and this project presents an automated approach to coding transcripts from audio. The libray audio files are auto-transcribed with Whisper, each one-sentence subtitle categorized by embedded-similarity to user-defined categories. The resulting categorized subtitles are saved as an SRT file for verification. 
 
 ### Methodology:
 Our approach involves several steps:
 
-Automatic speech recognition (ASR): We use the PyDub library to convert the audio files to mono WAV format, and then pass them through the Google Cloud Speech-to-Text API for automatic transcription. The resulting text is then saved as a JSON file.
+Automatic speech recognition (ASR): We use the PyDub library to convert the audio files to mono WAV format, and then pass them through the Whisper automatic transcription, using WhisperX for word-by-word timecode alignment. The resulting .srt subtitles are saved as JSON.
 
 Category definition: Users define categories of interest and provide example phrases or sentences that represent each category. These example phrases are used to create category embeddings using OpenAI's text-embedding-ada-002 model.
 
 Category embedding: We use the OpenAI text-embedding-ada-002 model to embed each category in a high-dimensional space. The resulting embeddings are saved to a CSV file.
 
-Categorization: We use the text-embedding-ada-002 model to calculate the cosine similarity between each sentence in the autotranscribed file and the embeddings of the user-defined categories. The sentence is then assigned to the category with the highest similarity score. The resulting categorized subtitles are output as an SRT file.
+Categorization: We use the text-embedding-ada-002 model and calculate the cosine similarity between each sentence in the autotranscribed file and the embeddings of the user-defined categories. The sentence is then assigned to the category with the highest similarity score. The resulting categorized subtitles are output as an SRT file.
 
 Human Verification: We can utilize the SRT file format to enable easy verification of the categorization. Researchers can use video players that support SRT files to play the video with the categorized subtitles for quick editing. The video player can display the subtitles alongside the audio, allowing for quick verification of the categorization. If the categorization is incorrect, we can quickly fix the error and move to the next section. To add a new code, we can refine the list of categories to provide more phrases or sentences that represent the new code, and rerun the script to include those in the remaining unverified content.
 
