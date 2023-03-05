@@ -7,7 +7,16 @@ import csv
 
 db_file = "data.db"
 # Set the path of the input folder containing .m4a files
-input_folder = input("/path/to/folder")
+  # Prompt the user for a list of categories
+print("This script will auto-transcribe full sentences of >30 seconds, and then categorize each section of subtitle by the most similar embeddings to the categories provided. ")
+print("\n \n Input a file directory, and the program will convert each .m4a file into a .wav, for OpenAI Whisper to automatically transcribe locally. The WhisperX Module will align timecode for each word as an .srt file")
+print("the minimum duration of each section is set to combine subs to at least 30 seconds and then end on an end-of-sentence break marker such as .!?,;:--.")
+print("OpenAI ADA model generates embeddings (a vector of associated and related meanings) for each subtitle, as well as embeddings for each category/research code provided.")
+print("We use cosign similarity comparison and assume the most similar category to be the most relevant tag for each section of text \n \n")
+input_folder = input("To begin, provide the /path/to/inputfolder")
+
+input_string = input("Provide a list of categories (or research codes separated by commas)")
+
 
 def db_setup(db_file):
     # Connect to the database
@@ -189,12 +198,10 @@ def create_srt_transcript(input_file: str, device: str = "cuda"):
 
 
   
-def get_categories():
+def get_categories(input_string):
 
-  # Prompt the user for a list of categories
-  input_string = input("Provide a list of categories (or research codes), separated by commas. This program will auto-categorize each section of subtitle by the most similar embeddings: ")
 
-  # Parse the input string into a list of categories
+  # Parse the input string into a list of categories, separated by commas
   cat_list = input_string.split(",")
 
   # Write the list to a CSV file
