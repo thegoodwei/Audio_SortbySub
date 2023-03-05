@@ -9,6 +9,10 @@ import openai
 import srt
 import json
 import whisperx
+
+openai.api_key = os.environ["OPENAI_API_KEY"]
+
+
 """
 This script performs audio transcription and subtitles creation using OpenAI's Whisper model and SRT format. 
 
