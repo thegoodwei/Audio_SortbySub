@@ -28,10 +28,9 @@ This script requires Python 3.7 or later, and the following packages:
 tensorflow==2.6.0
 tensorflow_hub==0.12.0
 pysrt==1.1.2
-To install the required packages, run the following command:
-sudo apt-get install python3 git
-python3 -m pip install  os glob csv sqlite3 numpy openai srt json whisperx
- openai numpy pytorch wheel moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
+
+  sudo apt-get install python3 git 
+  python3 -m pip install  os glob csv sqlite3 numpy openai srt json whisper openai numpy pytorch wheel moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
 
 
 # Usage
