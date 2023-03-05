@@ -152,46 +152,14 @@ def get_categories():
   input_string = input("Provide a list of categories (or research codes), separated by commas. This program will auto-categorize each section of subtitle by the most similar embeddings: ")
 
   # Parse the input string into a list of categories
-  word_list = input_string.split(",")
+  cat_list = input_string.split(",")
 
   # Write the list to a CSV file
   with open("categories.csv", "w+") as f:
     writer = csv.writer(f)
-    writer.writerow(word_list)
+    writer.writerow(cat_list)
     f.close()
-  return word_list
-
-      
     
-# Split the input string into a list of values using the csv module
-
-def categorize(input_folder, categorize[]):
-  counter = 0
-  for filepath in glob.glob(os.path.join(input_folder, "*.srt")):
-      counter +=1
-      filename = os.path.splitext(os.path.basename(filepath))[0]
-      output_path = os.path.join(input_folder, "coded_" + filename + ".srt")
-      load_subtitles(filepath, db_file)
-      #TODO 
-      #create list of embeddings for each category
-      #for each subtitle section
-        #calculate similarity of subtitle section against each category
-        #calculate category with the greatest similarity score
-        #write the most similiar category name under the timecode of the .srt text
-        
-      
-      
-      
-      
-      
-      
-      
-
-      
-      
-
-def search_database(srt_file, db_file, query, top_n=int(total_categories)):
-    print("Search has begun:") 
     # Connect to the database
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
@@ -200,9 +168,43 @@ def search_database(srt_file, db_file, query, top_n=int(total_categories)):
     memc = memconn.cursor()
     memc.execute("CREATE TABLE IF NOT EXISTS subtitles (start REAL, end REAL, text TEXT, similarity_score REAL)")
     memconn.commit()
+    
+  category_embeddings = []
+  for category in cat_list:
     # Get the embeddings for the query
-    response = openai.Embedding.create(model="text-embedding-ada-002", input=query)
-    query_embedding = response["data"][0]["embedding"]
+    response = openai.Embedding.create(model="text-embedding-ada-002", input=category)
+    category_embeddings.append((category, response["data"][0]["embedding"]))
+  conn.close()
+
+      
+  return category_embeddings
+
+      
+    
+# Split the input string into a list of values using the csv module
+
+
+#note, categories is an array of tuples [(category, embedding)]
+def categorize(srt_file, categories, output_path, counter):
+      #put subtitles in a new database
+      db_file = "data" + counter + ".db"
+      load_subtitles(srt_file, db_file)
+      #TODO 
+      #for each subtitle section
+        #calculate similarity of subtitle section against each category
+        #calculate category with the greatest similarity score
+        #write the most similiar category name under the timecode of the .srt text
+            # Connect to the database
+
+
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Create a temporary database in memory to store the results
+    memconn = sqlite3.connect(":memory:")
+    memc = memconn.cursor()
+    memc.execute("CREATE TABLE IF NOT EXISTS subtitles (start REAL, end REAL, categorized TEXT, similarity_score REAL, text TEXT)")
+    memconn.commit()
+          
     # Get the subtitles from the database
     c.execute("SELECT start,end,text,embeddings FROM subtitles WHERE srt_file = ? and embeddings != 'None'", (srt_file,))
     subtitles = c.fetchall()
@@ -210,49 +212,64 @@ def search_database(srt_file, db_file, query, top_n=int(total_categories)):
     conn.close()
     # Get the text of the subtitles 
     for time_start,time_end,sub_text,sub_embedding in subtitles:
-        delayed_completion(delay_in_seconds=delay)
-        # Get the embedding for the subtitle  
+        # Get the embedding for the subtitle, reset category similariy between each section
         sub_embedding = json.loads(sub_embedding)
-        # Calculate the cosine similarity
-        similarity = np.dot(query_embedding, sub_embedding) / (np.linalg.norm(query_embedding) * np.linalg.norm(sub_embedding))
-        # Print above avg results 
+        similarity = 0
+        relevant_category = none
+
+        for category, category_embedding in categories:
+        
+           # Calculate the highest cosine similarity by category
+            simscore = np.dot(category_embedding, sub_embedding) / (np.linalg.norm(category_embedding) * np.linalg.norm(sub_embedding))
+            if simscore > similarity
+               similarity = simscore
+               relevant_category = category
+        
         # Insert data into the temporary database
-        memc.execute("INSERT INTO subtitles VALUES (?,?,?,?)", (time_start, time_end, sub_text, similarity))
+        memc.execute("INSERT INTO subtitles VALUES (?,?,?,?)", (time_start, time_end,  relevant_category, similarity, sub_text))
         memconn.commit()
     f.close()
     print("..........................")
     print(".......................................")
     print(".....................................................")
     # Get the top n results
-    memc.execute("SELECT start,end,text,similarity_score FROM subtitles ORDER BY similarity_score DESC LIMIT ?", (top_n,)) #was ORDER BY similarity_score
+    memc.execute("SELECT start,end,categorized,similarity_score, text FROM subtitles") #ORDER BY similarity_score DESC LIMIT ?", (top_n,))
     results = memc.fetchall()
     # Print the results
-    selected_subs = []
+    categorized_subs = []
     index = 1
-    for time_start,time_end,sub_text,similarity_score in results:
+    for time_start,time_end,categorized,similarity_score,sub_text in results:
         # Convert time_start and time_end back to timedelta objects
         time_start = srt.timedelta(seconds=time_start)
         time_end = srt.timedelta(seconds=time_end)
         #sel content = sub_text # "{similarity_score} \n {sub_text}"
         #selectofsub = find_complete_section(sub_text, user_prompt)
         # Print the results
-        print(time_start, time_end, "\n", sub_text, "\n", "=", similarity_score)
-        selected_subs.append(srt.Subtitle(index=index, start=time_start, end=time_end, content=sub_text))
+        print(time_start, time_end, "\n", categorized, "=", similarity_score, "\n" sub_text)
+        categorized_subtext = string("\n", categorized, "=", similarity_score, "\n" sub_text)) 
+        categorized_subs.append(srt.Subtitle(index=index, start=time_start, end=time_end, content=categorized_subtext))
         index+=1
-    #Print selects to file, with details to terminal
-    write_to_file(selected_subs, srt_file)
 
-    return(srt_file)
-      
-      
-      
-      
-      
+    if os.path.exists(output_path):
+        os.remove(output_path)
+    with open(output_path, 'w+') as f:
+        f.write(srt.make_legal_content(srt.compose(categorized_subs)))
+    f.close()
+    print("written final categorized subs to file")
+    print(output_path)
+    return output_path
       
       
 if __name__ == "__main__":
   #batch m4a into timecode-aligned wordsubs, combined to end on complete sentences <30 seconds, saved as .srt files
   setup(input_folder)
+  #get the user input csv of categories, 
   categories = get_categories()
-  categorize(input_folder, categories)
+  #batch the whole folder .srt files 
+  counter = 0
+  for filepath in glob.glob(os.path.join(input_folder, "*.srt")):
+      counter +=1
+      filename = os.path.splitext(os.path.basename(filepath))[0]
+      output_path = os.path.join(input_folder, "codecategorized_" + filename + ".txt")
+      categorize(filepath, categories, output_path, counter)
   
