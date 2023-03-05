@@ -28,3 +28,4 @@ main.py
 
 pip3 install openai numpy wheel whisper torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
 
+export OPENAI_API_KEY=<your-api-key>
