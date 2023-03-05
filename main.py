@@ -9,7 +9,7 @@ import openai
 import srt
 import json
 import whisperx
-
+import openai
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
