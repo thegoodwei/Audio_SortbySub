@@ -1,10 +1,6 @@
-# Audio to Auto-Transcript Embeddings to Categorized Subtitles
-### Qualitative Research Data from Deductive Prompting of an entire .m4a library
+# Qualitative Research Data from Deductive Prompting of an entire .m4a library
 
-This Python script is designed to automate the deductive research process from .m4a interview transcript analysis. It works by using the text-embedding model to compare a list of subtitles with categories can determine the most relevant category for each sentence.
-
-### 
-Qualitative research requires the persistant analysis of vast amounts of audio data, and this project presents an automated approach to coding transcripts from audio. The libray audio files are auto-transcribed with Whisper, each one-sentence subtitle categorized by embedded-similarity to user-defined categories. The resulting categorized subtitles are saved as an SRT file for verification. 
+This Python script is designed to automate the research process of coding interview transcripts. The audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT library.
 
 ### Methodology:
 Our approach involves several steps:
@@ -19,7 +15,7 @@ Categorization: We use the text-embedding-ada-002 model and calculate the cosine
 
 Human Verification: We can utilize the SRT file format to enable easy verification of the categorization. Researchers can use video players that support SRT files to play the video with the categorized subtitles for quick editing. The video player can display the subtitles alongside the audio, allowing for quick verification of the categorization. If the categorization is incorrect, we can quickly fix the error and move to the next section. To add a new code, we can refine the list of categories to provide more phrases or sentences that represent the new code, and rerun the script to include those in the remaining unverified content.
 
-Training a model: To ensure the accuracy of the categorization, researchers can compare manually coded transcripts to auto-categorized results, and the manual categorization can then be compared to the output of the script. Any discrepancies can be used to identify areas for improvement in the script. Researchers can adust parameters such as the minimum quote length or quote breaking pattern as well as the similarity threshhold for assigning a sentence to any category.  Given enough data, researchers might choose to adjust the pretrained model in use or train a custom AI model to code transcripts with their specific dataset. By implementing these systems, we can improve the efficiency and accuracy of the code-categorization process, ultimately enabling researchers to more effectively analyze extremely vast quantities of audio data for research.
+Training a model: To ensure the accuracy of the categorization, researchers can compare manually coded transcripts to auto-categorized results, and the manual categorization can then be compared to the output of the script. Any discrepancies can be used to identify areas for improvement in the script. Researchers can adust parameters such as the minimum quote length or quote breaking pattern as well as the similarity threshhold for assigning a sentence to any category.  Given enough data, researchers might choose to adjust the pretrained model in use or finetune a custom AI model to code transcripts with this specific dataset. By implementing these systems, we can improve the efficiency and accuracy of the code-categorization process, ultimately enabling researchers to more effectively analyze extremely vast quantities of audio data for research.
 
 
 ## Installation
