@@ -1,6 +1,26 @@
 # Deductive Autocoding
-## Autotranscription and Auto Categorization for Qualitative Data Analysis with .m4a audio
-This Python script is designed to automate the deductive coding of autotranscribed .m4a files for qualitative research analysis. The script uses OpenAI's text-embedding-ada-002 model to categorize subtitles into user-defined categories and writes the output to an .srt file.
+### Autotranscription and Auto Categorization for Qualitative Data Analysis with .m4a audio
+
+This Python script is designed to automate the deductive coding of autotranscribed .m4a files for qualitative research analysis. The script uses OpenAI's text-embedding-ada-002 model to categorize subtitles into user-defined categories and writes the output to an .srt file. 
+
+#### Purpose
+Qualitative research often involves the analysis of large amounts of audio data, which can be time-consuming and resource-intensive. This project presents an automated approach to categorizing autotranscribed audio files using OpenAI's text-embedding-ada-002 model. The approach involves converting audio files to text using automatic speech recognition (ASR) software, and then using the resulting text to categorize the audio based on user-defined categories. The resulting categorized subtitles are output as an SRT file, which can be used for further analysis. The script is in Beta and this approach will need be tested with results manually verified for acccuracy.
+
+### Methodology:
+Our approach involves several steps:
+
+Automatic speech recognition (ASR): We use the PyDub library to convert the audio files to mono WAV format, and then pass them through the Google Cloud Speech-to-Text API for automatic transcription. The resulting text is then saved as a JSON file.
+
+Category definition: Users define categories of interest and provide example phrases or sentences that represent each category. These example phrases are used to create category embeddings using OpenAI's text-embedding-ada-002 model.
+
+Category embedding: We use the OpenAI text-embedding-ada-002 model to embed each category in a high-dimensional space. The resulting embeddings are saved to a CSV file.
+
+Categorization: We use the text-embedding-ada-002 model to calculate the cosine similarity between each sentence in the autotranscribed file and the embeddings of the user-defined categories. The sentence is then assigned to the category with the highest similarity score. The resulting categorized subtitles are output as an SRT file.
+
+Human Verification: We can utilize the SRT file format to enable easy verification of the categorization. Researchers can use video players that support SRT files to play the video with the categorized subtitles for quick editing. The video player can display the subtitles alongside the audio, allowing for quick verification of the categorization. If the categorization is incorrect, we can quickly fix the error and move to the next section. To add a new code, we can refine the list of categories to provide more phrases or sentences that represent the new code, and rerun the script to include those in the remaining unverified content.
+
+Training a model: To ensure the accuracy of the categorization, researchers can compare manually coded transcripts to auto-categorized results, and the manual categorization can then be compared to the output of the script. Any discrepancies can be used to identify areas for improvement in the script. Researchers can adust parameters such as the minimum quote length or quote breaking pattern as well as the similarity threshhold for assigning a sentence to any category.  Given enough data, researchers might choose to adjust the pretrained model in use or train a custom AI model to code transcripts with their specific dataset. By implementing these systems, we can improve the efficiency and accuracy of the code-categorization process, ultimately enabling researchers to more effectively analyze extremely vast quantities of audio data for research.
+
 
 ## Installation
 This script requires Python 3.7 or later, and the following packages:
