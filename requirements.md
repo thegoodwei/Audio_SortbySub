@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install build-essential python3
+sudo apt install build-essential python3 ffmpeg
 
 python3 --version
 
