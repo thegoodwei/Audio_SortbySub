@@ -62,7 +62,7 @@ def load_subtitles(srt_file, db_file):
     conn.close()
     
 
-def setup(input_folder)
+def setup(input_folder):
   # Iterate through the files in the input folder
   for filepath in glob.glob(os.path.join(input_folder, "*.m4a")):
       # Get the filename and path of the input .m4a file
@@ -182,9 +182,13 @@ def create_srt_transcript(input_file: str, device: str = "cuda"):
                 addsub = subs[j]
                 text += ' ' + addsub.content
                 end = addsub.end.total_seconds() 
-                iscomplete = find_complete_section(text)
+                #check if the sentence is complete
+                last_three_characters = text[-4:]
+                for char in last_three_characters:
+                  if char in ".,?!:-":
+                    iscomplete = True
                 print("iscomplete looped value: ", str(iscomplete))
-                if (iscomplete == True) or (iscomplete == "True"): # ('true' in iscomplete)):
+                if (iscomplete == True):
                     break
                 j += 1
             combined_subs.append((srt.Subtitle(index=(count), start=srt.timedelta(seconds=start), end=srt.timedelta(seconds=end), content=text)))
