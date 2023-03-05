@@ -9,7 +9,6 @@ import openai
 import srt
 import json
 import whisperx
-from custom_library import db_setup, load_subtitles, get_embeddings
 """
 This script performs audio transcription and subtitles creation using OpenAI's Whisper model and SRT format. 
 
