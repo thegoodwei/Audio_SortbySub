@@ -134,15 +134,25 @@ def setup(input_folder):
       create_srt_transcript(filepath, output_path, "cuda")
   
   
-def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda"):
+def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda") -> None:
     """
-    Create an srt transcript from an audio file.
+    Create an srt transcript from an audio file using the Whisper speech recognition model.
+
     Args:
-    - input_file (str): the path to the input audio file
-    - output_file (str): the path to the output srt file
-    - device (str): the device to use for processing, either "cuda" or "cpu" (default "cuda")
+    - input_file (str): The path to the input audio file.
+    - output_file (str): The path to the output srt file.
+    - device (str): The device to use for processing, either "cuda" or "cpu" (default "cuda").
+
     Returns:
-    None
+    - None.
+
+    Raises:
+    - IOError: If the input file is not found or cannot be opened.
+    - RuntimeError: If there is an error loading or aligning the Whisper model.
+
+    The function converts the input file to .wav format and processes it using the Whisper speech recognition model to
+    generate a time-aligned transcript. The transcript is then split into subtitles and combined into complete sentences
+    where possible. The final transcript is written to the output file in .srt format.
     """
     srt_file = output_file
     input_audio = input_file
@@ -245,7 +255,22 @@ def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda
     print("written to file")
     return srt_file
 
-def get_categories(input_string):
+#def get_categories(input_string):
+def get_categories(input_string: str) -> List[Tuple[str, List[float]]]:
+        """
+    Given a string of comma-separated categories, retrieves the embeddings
+    of each category using OpenAI's text-embedding-ada-002 model. Returns a
+    list of tuples, where each tuple contains a category and its corresponding
+    embedding as a list of floats.
+
+    Args:
+        input_string: A string of comma-separated categories.
+
+    Returns:
+        A list of tuples, where each tuple contains a category and its
+        corresponding embedding as a list of floats.
+    """
+
   # Parse the input string into a list of categories, separated by commas
   cat_list = input_string.split(",")
 
@@ -278,7 +303,22 @@ def get_categories(input_string):
 # Split the input string into a list of values using the csv module
 
 #note, categories is an array of tuples [(category, embedding)]
-def categorize(srt_file, categories, output_path, dbfile):
+#def categorize(srt_file, categories, output_path, dbfile):
+def categorize(srt_file: str, categories: List[Tuple[str, List[float]]], output_path: str, db_file: str) -> str:
+    """
+    Categorizes the subtitles in the specified srt_file into the provided categories and writes the output to an srt file.
+
+    Args:
+    - srt_file (str): A string representing the path to the srt file to be categorized.
+    - categories (List[Tuple[str, List[float]]]): A list of tuples representing the categories to be used. Each tuple contains a category name (str) and its corresponding embedding (List[float]).
+    - output_path (str): A string representing the path to write the output categorized srt file.
+    - db_file (str): A string representing the path to the database file used to store the subtitles.
+
+    Returns:
+    - A string representing the path of the output categorized srt file.
+    """
+
+
       #put subtitles in a new database
       load_subtitles(srt_file, db_file)
 
