@@ -3,7 +3,52 @@ import os
 import glob
 import sys
 import csv
-#from custom_transcription_embedding_library import db_setup, load_subtitles, get_embeddings
+import sqlite3
+import numpy as np
+import openai
+import srt
+import json
+import whisperx
+from custom_library import db_setup, load_subtitles, get_embeddings
+"""
+This script performs audio transcription and subtitles creation using OpenAI's Whisper model and SRT format. 
+
+Usage:
+    1. Set the path of the input folder containing .m4a files.
+    2. Provide a list of categories (or research codes separated by commas).
+    3. Run the script.
+
+Requirements:
+    1. Python 3.6 or higher
+    2. OpenAI's Whisper model
+    3. SQLite3
+
+Functions:
+    db_setup(db_file):
+        This function creates a table in the SQLite database to store the subtitle data.
+
+    write_to_file(newsubs, srt_file):
+        This function writes the subtitles to a file in the SRT format.
+
+    load_subtitles(srt_file, db_file):
+        This function parses the SRT file and stores the subtitles in the SQLite database.
+
+    setup(input_folder):
+        This function prepares the input files by converting the .m4a files to .wav format and transcribing them to SRT format.
+
+    create_srt_transcript(input_file, output_file, device):
+        This function performs audio transcription using OpenAI's Whisper model and creates an SRT file.
+
+Input:
+    db_file (str): The path of the SQLite database file to store the subtitle data.
+    input_folder (str): The path of the input folder containing .m4a files.
+    input_string (str): A list of categories (or research codes separated by commas).
+    minimum_length (int): The minimum length of a subtitle in seconds.
+
+Output:
+    Subtitle data is stored in the SQLite database and then categorized SRT files are generated for each input .m4a file.
+
+"""
 
 db_file = "data.db"
 # Set the path of the input folder containing .m4a files
@@ -17,7 +62,9 @@ input_folder = input("To begin, provide the /path/to/inputfolder")
 
 input_string = input("Provide a list of categories (or research codes separated by commas)")
 
+minimum_length = 30
 
+  
 def db_setup(db_file):
     # Connect to the database
     conn = sqlite3.connect(db_file)
@@ -29,7 +76,7 @@ def db_setup(db_file):
     # Close the connection
     conn.close()
     
-    def write_to_file(newsubs, srt_file):#="temp.srt"):
+def write_to_file(newsubs, srt_file):#="temp.srt"):
     #clear files to write project outputs
     with open(srt_file, 'w+') as f:
         f.write(srt.make_legal_content(srt.compose(newsubs)))
@@ -84,7 +131,7 @@ def setup(input_folder):
       filename = os.path.splitext(os.path.basename(filepath))[0]
       output_path = os.path.join(input_folder, filename + ".srt")
       
-      create_srt_transcript(input_file: filepath, output_file: output_path, device: str = "cuda")
+      create_srt_transcript(filepath, output_path, "cuda")
   
   
 def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda"):
@@ -152,8 +199,8 @@ def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda
         start = sub.start.total_seconds()
         end = sub.end.total_seconds()
         text = sub.content
-        iscomplete = false
-        minimum_length = 30
+        iscomplete = False
+        #minimum_length = 30 #default 30, set above
         count = 0
         j = i + 1
         #while there are more subs and the current sub is shorter than 30 seconds, combine
@@ -198,11 +245,7 @@ def create_srt_transcript(input_file: str, output_file: str, device: str = "cuda
     print("written to file")
     return srt_file
 
-
-  
 def get_categories(input_string):
-
-
   # Parse the input string into a list of categories, separated by commas
   cat_list = input_string.split(",")
 
@@ -231,23 +274,13 @@ def get_categories(input_string):
       
   return category_embeddings
 
-      
     
 # Split the input string into a list of values using the csv module
 
-
 #note, categories is an array of tuples [(category, embedding)]
-def categorize(srt_file, categories, output_path, counter):
+def categorize(srt_file, categories, output_path, dbfile):
       #put subtitles in a new database
-      db_file = "data" + counter + ".db"
       load_subtitles(srt_file, db_file)
-      #TODO 
-      #for each subtitle section
-        #calculate similarity of subtitle section against each category
-        #calculate category with the greatest similarity score
-        #write the most similiar category name under the timecode of the .srt text
-            # Connect to the database
-
 
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
@@ -267,25 +300,24 @@ def categorize(srt_file, categories, output_path, counter):
         # Get the embedding for the subtitle, reset category similariy between each section
         sub_embedding = json.loads(sub_embedding)
         similarity = 0
-        relevant_category = none
+        relevant_category = None
 
         for category, category_embedding in categories:
         
            # Calculate the highest cosine similarity by category
             simscore = np.dot(category_embedding, sub_embedding) / (np.linalg.norm(category_embedding) * np.linalg.norm(sub_embedding))
-            if simscore > similarity
+            if simscore > similarity:
                similarity = simscore
                relevant_category = category
         
         # Insert data into the temporary database
-        memc.execute("INSERT INTO subtitles VALUES (?,?,?,?)", (time_start, time_end,  relevant_category, similarity, sub_text))
+        memc.execute("INSERT INTO subtitles VALUES (?,?,?,?,?)", (time_start, time_end,  relevant_category, similarity, sub_text))
         memconn.commit()
-    f.close()
-    print("..........................")
-    print(".......................................")
-    print(".....................................................")
-    # Get the top n results
-    memc.execute("SELECT start,end,categorized,similarity_score, text FROM subtitles") #ORDER BY similarity_score DESC LIMIT ?", (top_n,))
+    memconn.close()#f.close() ##why
+    memconn = sqlite3.connect(":memory:")##why would it break without closing and reopening memconn?
+    memc = memconn.cursor()
+    # Get the categorized results
+    memc.execute("SELECT start,end,categorized,similarity_score,text FROM subtitles") #ORDER BY similarity_score DESC LIMIT ?", (top_n,))
     results = memc.fetchall()
     # Print the results
     categorized_subs = []
@@ -294,11 +326,9 @@ def categorize(srt_file, categories, output_path, counter):
         # Convert time_start and time_end back to timedelta objects
         time_start = srt.timedelta(seconds=time_start)
         time_end = srt.timedelta(seconds=time_end)
-        #sel content = sub_text # "{similarity_score} \n {sub_text}"
-        #selectofsub = find_complete_section(sub_text, user_prompt)
         # Print the results
-        print(time_start, time_end, "\n", categorized, "=", similarity_score, "\n" sub_text)
-        categorized_subtext = string("\n", categorized, "=", similarity_score, "\n" sub_text)) 
+        print(time_start, time_end, "\n", categorized, "==", similarity_score, "\n", sub_text)
+        categorized_subtext = "\n".join([categorized, "=", str(similarity_score), "\n", sub_text])
         categorized_subs.append(srt.Subtitle(index=index, start=time_start, end=time_end, content=categorized_subtext))
         index+=1
 
@@ -313,14 +343,15 @@ def categorize(srt_file, categories, output_path, counter):
       
       
 if __name__ == "__main__":
-  #batch m4a into timecode-aligned wordsubs, combined to end on complete sentences <30 seconds, saved as .srt files
+  #batch m4a into timecode-aligned wordsubs, combined to end on complete sentences as .srt files
   setup(input_folder)
   #get the user input csv of categories, 
-  categories = get_categories()
+  categories = get_categories(input_string)
   #batch the whole folder .srt files 
   counter = 0
   for filepath in glob.glob(os.path.join(input_folder, "*.srt")):
       counter +=1
+      db_file = "data" + counter + ".db"
       filename = os.path.splitext(os.path.basename(filepath))[0]
       output_path = os.path.join(input_folder, "codecategorized_" + filename + ".txt")
       categorize(filepath, categories, output_path, counter)
