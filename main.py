@@ -1,67 +1,4 @@
-import os
-import glob
-import sys
-import csv
-import sqlite3
-import numpy as np
-import srt
-import json
-import ffmpeg
-import whisper
-import whisperx
-from pydub import AudioSegment
-import openai
-openai.api_key = os.environ["OPENAI_API_KEY"]
 
-
-"""
-This script performs audio transcription and subtitles creation using OpenAI's Whisper model and SRT format. 
-
-Usage:
-    1. Set the path of the input folder containing .m4a files.
-    2. Provide a list of categories (or research codes separated by commas).
-    3. Run the script.
-
-Requirements:
-    1. Python 3.6 or higher
-    2. OpenAI's Whisper model
-    3. SQLite3
-
-Functions:
-    db_setup(db_file):
-        This function creates a table in the SQLite database to store the subtitle data.
-
-    write_to_file(newsubs, srt_file):
-        This function writes the subtitles to a file in the SRT format.
-
-    load_subtitles(srt_file, db_file):
-        This function parses the SRT file and stores the subtitles in the SQLite database.
-
-    setup(input_folder):
-        This function prepares the input files by converting the .m4a files to .wav format and transcribing them to SRT format.
-
-    create_srt_transcript(input_file, output_file, device):
-        This function performs audio transcription using OpenAI's Whisper model and creates an SRT file.
-
-Input:
-    db_file (str): The path of the SQLite database file to store the subtitle data.
-    input_folder (str): The path of the input folder containing .m4a files.
-    input_string (str): A list of categories (or research codes separated by commas).
-    minimum_length (int): The minimum length of a subtitle in seconds.
-
-Output:
-    Subtitle data is stored in the SQLite database and then categorized SRT files are generated for each input .m4a file.
-
-"""
-
-db_file = "data.db"
-# Set the path of the input folder containing .m4a files
-  # Prompt the user for a list of categories
-print("This script will auto-transcribe full sentences of >30 seconds, and then categorize each section of subtitle by the most similar embeddings to the categories provided. ")
-print("\n \n Input a file directory, and the program will convert each .m4a file into a .wav, for OpenAI Whisper to automatically transcribe locally. The WhisperX Module will align timecode for each word as an .srt file")
-print("the minimum duration of each section is set to combine subs to at least 30 seconds and then end on an end-of-sentence break marker such as .!?,;:--.")
-print("OpenAI ADA model generates embeddings (a vector of associated and related meanings) for each subtitle, as well as embeddings for each category/research code provided.")
-print("We use cosign similarity comparison and assume the most similar category to be the most relevant tag for each section of text \n \n")
 
 input_file = input("To begin, provide the input file:  ")
 filename = os.path.splitext(os.path.basename(input_file))[0]
@@ -192,16 +129,14 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
     if device == "cuda":
         print(input_file)
     #try:
-        model = whisperx.load_model("medium.en", device)
+        model = whisperx.load_model("large", device)# ("medium.en", device)
         result = model.transcribe(input_file) 
-        print("Before Alignment: \n")
-        print(result["segments"]) # before alignment
         # Load the alignment model and metadata
         model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
         print("aligning timecode")
         # Align the whisper output
         result_aligned = whisperx.align(result["segments"], model_a, metadata, input_audio, device)
-        print(result_aligned)
+        #print(result_aligned)
    #     except Exception as e:
    #         print("Failed to align whisper output: %s", e)
             #return
@@ -242,9 +177,9 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
             #minimum_length = 30 #default 30, set above
             count = 0
             j = i + 1
-            #while there are more subs and the current sub is shorter than 30 seconds, combine
+            #while there are more subs and the current sub is shorter than minimum duration, combine
             while (j < len(subs)) and ((end - start) < (int(minimum_length))):
-                print(j, "<", len(subs), "(i.e. not last sub), and, ", end, "-", start, "<", minimum_length, "second quotes minimum")
+                #print(j, "<", len(subs), "(i.e. not last sub), and, ", end, "-", start, "<", minimum_length, "second quotes minimum")
                 addsub = subs[j]
                 text += ' ' + addsub.content
                 end = addsub.end.total_seconds() 
@@ -261,7 +196,6 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
             else:
               #  print("Sentance not complete, starting loop:")
                 while (j<len(subs)):
-                    print (i, "-->", j)
                     if (j==len(subs)):
                         break
                     addsub = subs[j]
@@ -272,8 +206,8 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
                     for char in last_three_characters:
                       if char in ".,?!:-":
                         iscomplete = True
-                    print("iscomplete looped value: ", str(iscomplete))
                     if (iscomplete == True):
+                        #print (i, "-->", j)
                         break
                     j += 1
                 combined_subs.append((srt.Subtitle(index=(count), start=srt.timedelta(seconds=start), end=srt.timedelta(seconds=end), content=text)))
@@ -282,11 +216,33 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
         with open(srt_file, 'w+') as f:
               f.write(srt.make_legal_content(srt.compose(combined_subs)))
         f.close()
-        print("written to file")
+        print(srt.compose(combined_subs))
+        print("written to file:", srt_file)
+
         return srt_file
     #except Exception as e:
     #    print("Failed to align whisper output: %s", e)
 
+
+def get_embeddings(srt_file, db_file):
+    # Connect to the database
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the subtitles from the database
+    c.execute("SELECT start,end,text FROM subtitles WHERE srt_file = ? and embeddings='None'", (srt_file,))
+    subtitles = c.fetchall()
+    # Get the text of the subtitles
+    for time_start,time_end,sub_text in subtitles:
+        response = openai.Embedding.create(model="text-embedding-ada-002", input=sub_text)
+        embedding = response["data"][0]["embedding"]
+        c.execute("UPDATE subtitles SET embeddings = ? WHERE start = ? AND end = ? AND srt_file = ?", (json.dumps(embedding), time_start, time_end, srt_file))
+        # Commit the changes
+        conn.commit()
+        # print(format_time(time_end))
+    # Close the connection
+    conn.close()
+    print("Embedded meanings and associations found for every soundbite-sub.")
+    print(" ...")
 
 
 #def get_categories(input_string):
@@ -335,26 +291,6 @@ def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
     
 # Split the input string into a list of values using the csv module
 
-def get_embeddings(srt_file, db_file):
-    # Connect to the database
-    conn = sqlite3.connect(db_file)
-    c = conn.cursor()
-    # Get the subtitles from the database
-    c.execute("SELECT start,end,text FROM subtitles WHERE srt_file = ? and embeddings='None'", (srt_file,))
-    subtitles = c.fetchall()
-    # Get the text of the subtitles
-    for time_start,time_end,sub_text in subtitles:
-        response = openai.Embedding.create(model="text-embedding-ada-002", input=sub_text)
-        embedding = response["data"][0]["embedding"]
-        c.execute("UPDATE subtitles SET embeddings = ? WHERE start = ? AND end = ? AND srt_file = ?", (json.dumps(embedding), time_start, time_end, srt_file))
-        # Commit the changes
-        conn.commit()
-        # print(format_time(time_end))
-    # Close the connection
-    conn.close()
-    print("Embedded meanings and associations found for every clip.")
-    print(" ...")
-
 #note, categories is an array of tuples [(category, embedding)]
 #def categorize(srt_file, categories, output_path, dbfile):
 def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_path: str, db_file: str) -> str:
@@ -370,12 +306,12 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
     Returns:
     - A string representing the path of the output categorized srt file.
     """
-
+    print("Loading subs")
+    load_subtitles(srt_file, db_file)
     print("getting embeddings")
     get_embeddings(srt_file, db_file)
-    print("Loading subs")
       #put subtitles in a new database
-    load_subtitles(srt_file, db_file)
+
 
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
@@ -390,6 +326,11 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
     subtitles = c.fetchall()
     # Close the connection
     conn.close()
+
+    #setup category counter
+    category_counter=[]
+    for category, embedding in categories:
+        category_counter.append((category, 0))
     # Get the text of the subtitles 
     for time_start,time_end,sub_text,sub_embedding in subtitles:
         # Get the embedding for the subtitle, reset category similariy between each section
@@ -418,15 +359,28 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
     categorized_subs = []
     index = 1
     for time_start,time_end,categorized,similarity_score,sub_text in results:
+        #for each categorized sub, count it in the tuple
+        for i, (cat, qty) in enumerate(category_counter):
+          if categorized == cat: 
+            category_counter[i] = (cat, qty + 1)
         # Convert time_start and time_end back to timedelta objects
         time_start = srt.timedelta(seconds=time_start)
         time_end = srt.timedelta(seconds=time_end)
         # Print the results
-        category_similarity_str = str(categorized + "==" + str(similarity_score) + "%match \n ")
+        #category_similarity_str = str("CATEGORY:'" + categorized + "'==" + (similarity_score) + "% ")
         print(time_start, time_end, "\n", categorized, "==", similarity_score, "\n", sub_text)
-        categorized_subtext = "\n".join([category_similarity_str, sub_text, "\n"])
+        categorized_subtext =  str("    == '" + categorized + "', %" + str(similarity_score) +  "\n" + sub_text + "\n \n") # "\n".join([category_similarity_str, sub_text, "\n\n"])
         categorized_subs.append(srt.Subtitle(index=index, start=time_start, end=time_end, content=categorized_subtext))
         index+=1
+    print("Categories Parsed for:")
+    #    print(input_string)
+    print(category_counter)
+    categoryct_txt = "categoryresults_" + os.path.splitext(os.path.basename(input_file))[0] + ".txt"
+
+    with open(categoryct_txt, 'w+') as f:
+        for i, (cat, qty) in enumerate(category_counter)
+            f.write(str(str(qty) + " " + cat + "\n"))
+    print(categoryct_txt)
 
     if os.path.exists(output_path):
         os.remove(output_path)
@@ -440,8 +394,12 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
 
 def m4a_to_srt_categorized(input_file, input_string):
   transcribed_subtitles = setup(input_file)
+  print(transcribed_subtitles)
+  print("getting embeddings for categories: " + input_string)
   categories = get_categories(input_string)
-  categorize(transcribed_subtitles, categories, srt_output_path, db_file)
+  outfilename = "categorized_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
+  categorize(transcribed_subtitles, categories, outfilename, db_file)
+
 
 if __name__ == "__main__":
   m4a_to_srt_categorized(input_file, input_string)
