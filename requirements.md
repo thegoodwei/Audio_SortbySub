@@ -8,6 +8,11 @@ python3 --version
 
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
+sudo apt-get install build-essential cmake git-core libass-dev libfreetype6-dev \
+libsdl2-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev \
+libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo wget zlib1g-dev
+
+
 mono csharp shell
 
 sudo python3 get-pip.py
