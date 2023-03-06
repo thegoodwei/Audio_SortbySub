@@ -1,9 +1,10 @@
-# Qualitative Research Data from Deductive Prompting of an audio library
+# Qualitative Research from Deductive Prompting .m4a 
 
-.m4a audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT library. 
+.m4a audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT file or library. 
 
 This Python script attempts to automate the research process of coding interview transcripts. 
 
+![aiicon](aiicon.svg)
 
 ### Methodology:
 Our approach involves several steps:
@@ -64,6 +65,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-License
-MIT
 
