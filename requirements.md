@@ -25,17 +25,18 @@ python3 -m venv main
     
 source main/bin/activate
     
-python3 -m pip install openai numpy wheel whisper torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
-
+python3 -m pip install openai numpy wheel whisper ffmpeg-python torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
+ 
 apt install python3.10-venv
 
 sudo apt update
 
 main.py
 
-pip3 install openai numpy wheel whisper torch moviepy srt pydub  git+https://github.com/m-bain/whisperx.git
-pip install -U openai-whisper pip install git+https://github.com/openai/whisper.git 
+pip3 install openai numpy wheel whisper torch moviepy srt pydub setuptools-rust 
+pip install git+https://github.com/m-bain/whisperx.git
+pip install -U openai-whisper  | pip install git+https://github.com/openai/whisper.git 
 pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
-pip install setuptools-rust
+pip install ffmpeg-python==0.2.0
 
 export OPENAI_API_KEY=<your-api-key>
