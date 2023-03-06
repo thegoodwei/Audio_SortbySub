@@ -1,4 +1,64 @@
+import os
+import glob
+import sys
+import csv
+import sqlite3
+import numpy as np
+import srt
+import json
+import ffmpeg
+import whisper
+import whisperx
+import openai
+openai.api_key = os.environ["OPENAI_API_KEY"]
+from pydub import AudioSegment
+"""
+This script performs audio transcription and subtitles creation using OpenAI's Whisper model and SRT format. 
 
+Usage:
+    1. Set the path of the input folder containing .m4a files.
+    2. Provide a list of categories (or research codes separated by commas).
+    3. Run the script.
+
+Requirements:
+    1. Python 3.6 or higher
+    2. OpenAI's Whisper model
+    3. SQLite3
+
+Functions:
+    db_setup(db_file):
+        This function creates a table in the SQLite database to store the subtitle data.
+
+    write_to_file(newsubs, srt_file):
+        This function writes the subtitles to a file in the SRT format.
+
+    load_subtitles(srt_file, db_file):
+        This function parses the SRT file and stores the subtitles in the SQLite database.
+
+    setup(input_folder):
+        This function prepares the input files by converting the .m4a files to .wav format and transcribing them to SRT format.
+
+    create_srt_transcript(input_file, output_file, device):
+        This function performs audio transcription using OpenAI's Whisper model and creates an SRT file.
+
+Input:
+    db_file (str): The path of the SQLite database file to store the subtitle data.
+    input_file (str): The path of the input file .m4a
+    input_string (str): A list of categories (or research codes separated by commas).
+    minimum_length (int): The minimum length of a subtitle in seconds.
+
+Output:
+    Subtitle data is stored in the SQLite database and then categorized SRT files are generated for each input .m4a file.
+"""
+
+db_file = "data.db"
+# Set the path of the input folder containing .m4a files
+  # Prompt the user for a list of categories
+print("This script will auto-transcribe full sentences of >30 seconds, and then categorize each section of subtitle by the most similar embeddings to the categories provided. ")
+print("\n \n Input a file directory, and the program will convert each .m4a file into a .wav, for OpenAI Whisper to automatically transcribe locally. The WhisperX Module will align timecode for each word as an .srt file")
+print("the minimum duration of each section is set to combine subs to at least 30 seconds and then end on an end-of-sentence break marker such as .!?,;:--.")
+print("OpenAI ADA model generates embeddings (a vector of associated and related meanings) for each subtitle, as well as embeddings for each category/research code provided.")
+print("We use cosign similarity comparison and assume the most similar category to be the most relevant tag for each section of text \n \n")
 
 input_file = input("To begin, provide the input file:  ")
 filename = os.path.splitext(os.path.basename(input_file))[0]
@@ -7,9 +67,7 @@ srt_output_path = filename + ".srt"
 input_string = input("Provide a list of categories (or research codes separated by commas)")
 
 minimum_length = 30 #quote length
-
 minimum_length = input("minimum quote length?") # DEFAULT TO 30
-
   
 def db_setup(db_file):
     # Connect to the database
@@ -54,7 +112,6 @@ def load_subtitles(srt_file, db_file):
     # Close the connection
     conn.close()
     
-
 def setup(input_file):
       db_setup(db_file)
     #if "m4a" in input_file:
@@ -69,30 +126,6 @@ def setup(input_file):
       print(wavsound)
       return create_srt_transcript(wavsound, srt_filename, "cuda")
 
-#    else:
-#      input_folder = input_file #must be a folder not a file if not m4a
-#      # Iterate through the files in the input folder
-#    for filepath in glob.glob(os.path.join(input_folder, "*.m4a")):
-#          # Get the filename and path of the input .m4a file
-#          filename = os.path.splitext(os.path.basename(filepath))[0]
-#          wav_output = os.path.join(input_folder, filename + ".wav")
-#        
-#          # Load the audio file into a AudioSegment object
-#          audio = AudioSegment.from_file(filepath, format="m4a")
-#    
-#          # Export the AudioSegment object as a .wav file
-#          audio.export(wav_output, format="wav")
-#    
-#          # Remove the input .m4a files
-#          os.remove(filepath)
-
-        #transcribe each wav file into an SRT
-#    for filepath in glob.glob(os.path.join(input_folder, "*.wav")):
-#      filename = os.path.splitext(os.path.basename(filepath))[0]
-#      srt_output_path = os.path.join(input_folder, filename + ".srt")
-#      
-#      create_srt_transcript(filepath, srt_output_path, "cuda")
-  
   
 def create_srt_transcript(input_file, output_file: str, device: str = "cuda") -> None:
     """
@@ -136,18 +169,6 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
         print("aligning timecode")
         # Align the whisper output
         result_aligned = whisperx.align(result["segments"], model_a, metadata, input_audio, device)
-        #print(result_aligned)
-   #     except Exception as e:
-   #         print("Failed to align whisper output: %s", e)
-            #return
-        #print(result["segments"]) # before alignment
-        #print("_______word_segments")
-        #print(result_aligned["word_segments"]) # after alignment
-        #write_srt(result_aligned[segment], TextIO.txt)
-
-  #        audio_basename = Path(audio_path).stem 
-  #        with open(Path(output_dir) / (audio_basename + ".srt"), "w", encoding="utf-8") as srt: 
-  #            write_srt(result_aligned["segments"], file=srt)
 
         # Create the .srt transcript
         srt_transcript = []
@@ -244,7 +265,6 @@ def get_embeddings(srt_file, db_file):
     print("Embedded meanings and associations found for every soundbite-sub.")
     print(" ...")
 
-
 #def get_categories(input_string):
 def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
     """
@@ -288,9 +308,7 @@ def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
 
     return category_embeddings
 
-    
 # Split the input string into a list of values using the csv module
-
 #note, categories is an array of tuples [(category, embedding)]
 #def categorize(srt_file, categories, output_path, dbfile):
 def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_path: str, db_file: str) -> str:
@@ -311,7 +329,6 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
     print("getting embeddings")
     get_embeddings(srt_file, db_file)
       #put subtitles in a new database
-
 
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
@@ -391,7 +408,6 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
     print(output_path)
     return output_path
       
-
 def m4a_to_srt_categorized(input_file, input_string):
   transcribed_subtitles = setup(input_file)
   print(transcribed_subtitles)
@@ -399,7 +415,6 @@ def m4a_to_srt_categorized(input_file, input_string):
   categories = get_categories(input_string)
   outfilename = "categorized_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
   categorize(transcribed_subtitles, categories, outfilename, db_file)
-
 
 if __name__ == "__main__":
   m4a_to_srt_categorized(input_file, input_string)
