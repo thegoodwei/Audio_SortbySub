@@ -1,19 +1,16 @@
-<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Draw the OpenAI logo with headphones -->
-  <rect x="35" y="65" width="50" height="100" fill="#0082C6" />
-  <path d="M 85 65 L 165 65 L 215 165 L 165 265 L 85 265 L 35 165 Z" fill="#00C4B2" />
-  <path d="M 97.5 87.5 L 157.5 87.5 L 157.5 122.5 L 97.5 122.5 Z" fill="#FFF" />
-  <path d="M 97.5 127.5 L 157.5 127.5 L 157.5 162.5 L 97.5 162.5 Z" fill="#FFF" />
-  <path d="M 85 105 L 35 105 L 35 225 L 85 225 Z" fill="#00A2FF" />
-  <path d="M 215 105 L 165 105 L 165 225 L 215 225 Z" fill="#00A2FF" />
-  <rect x="80" y="110" width="10" height="80" fill="#FFF" />
-  <rect x="210" y="110" width="10" height="80" fill="#FFF" />
-  
-  <!-- Draw the book -->
-  <rect x="110" y="140" width="60" height="80" fill="#EB008C" />
-  <path d="M 110 140 L 80 155 L 80 220 L 110 205 Z" fill="#00C4B2" />
-  <path d="M 170 140 L 200 155 L 200 220 L 170 205 Z" fill="#00C4B2" />
-  <text x="140" y="175" font-size="18" font-family="Arial" fill="#FFF" text-anchor="middle">Qualitative</text>
-  <text x="140" y="195" font-size="18" font-family="Arial" fill="#FFF" text-anchor="middle">Audio</text>
-  <text x="140" y="215" font-size="18" font-family="Arial" fill="#FFF" text-anchor="middle">Dataparsing</text>
+<svg width="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="140" fill="#00b4b4"/>
+  <circle cx="150" cy="150" r="120" fill="#ffffff"/>
+  <path d="M150,150 l0,-100 a100,100 0 0,1 0,200 a100,100 0 0,1 0,-100" fill="#00b4b4"/>
+  <rect x="175" y="90" width="50" height="120" fill="#00b4b4"/>
+  <rect x="215" y="130" width="30" height="20" fill="#ffffff"/>
+  <rect x="180" y="140" width="20" height="20" fill="#ffffff"/>
+  <rect x="180" y="170" width="20" height="20" fill="#ffffff"/>
+  <rect x="215" y="180" width="30" height="20" fill="#ffffff"/>
+  <circle cx="225" cy="135" r="10" fill="#00b4b4"/>
+  <circle cx="225" cy="165" r="10" fill="#00b4b4"/>
+  <rect x="55" y="160" width="70" height="20" fill="#00b4b4"/>
+  <rect x="105" y="140" width="20" height="40" fill="#00b4b4"/>
+  <rect x="150" y="140" width="20" height="40" fill="#00b4b4"/>
+  <text x="150" y="245" font-size="28" font-family="Arial" fill="#ffffff" text-anchor="middle">OpenAI</text>
 </svg>
