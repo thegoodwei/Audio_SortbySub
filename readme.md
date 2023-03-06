@@ -17,10 +17,9 @@ Category embedding: We use the OpenAI text-embedding-ada-002 model to embed each
 
 Categorization: We use the text-embedding-ada-002 model and calculate the cosine similarity between each sentence in the autotranscribed file and the embeddings of the user-defined categories. The sentence is then assigned to the category with the highest similarity score. The resulting categorized subtitles are output as an SRT file.
 
-Human Verification: We can utilize the SRT file format to enable easy verification of the categorization. Researchers can use video players that support SRT files to play the video with the categorized subtitles for quick editing. The video player can display the subtitles alongside the audio, allowing for quick verification of the categorization. If the categorization is incorrect, we can quickly fix the error and move to the next section. To add a new code, we can refine the list of categories to provide more phrases or sentences that represent the new code, and rerun the script to include those in the remaining unverified content.
+Human Verification: We can utilize the SRT file format to enable easy verification of the categorization. Researchers can use video players that support SRT files to play the video with the categorized subtitles for quick editing. The video player can display the subtitles alongside the audio, allowing for quick verification of the categorization. If the categorization is incorrect, researchers can quickly fix the error and move to the next section. To add a new code, we can refine the list of categories to provide more phrases or sentences that represent the new code, and rerun the script to include those in the remaining unverified content.
 
-Training a model: To ensure the accuracy of the categorization, researchers can compare manually coded transcripts to auto-categorized results, and the manual categorization can then be compared to the output of the script. Any discrepancies can be used to identify areas for improvement in the script. Researchers can adust parameters such as the minimum quote length or quote breaking pattern as well as the similarity threshhold for assigning a sentence to any category.  Given enough data, researchers might choose to adjust the pretrained model in use or finetune a custom AI model to code transcripts with this specific dataset. By implementing these systems, we can improve the efficiency and accuracy of the code-categorization process, ultimately enabling researchers to more effectively analyze extremely vast quantities of audio data for research.
-
+Training a model: To ensure the accuracy of the categorization, researchers can also adust parameters such as the minimum quote length or quote breaking pattern as well as the similarity threshhold for assigning a sentence to any category.  Given enough data, researchers might choose to adjust the pretrained model in use or finetune a custom AI model to code transcripts with this specific dataset, as to compare manually coded transcripts to auto-categorized results, to build a bigger library of embeddings that might help the AI re-define each research-code or category as based on the subtext referenced. By implementing these systems, we can improve the efficiency and accuracy of the code-categorization process, ultimately enabling researchers to more effectively analyze extremely vast quantities of audio data for research.
 
 ## Installation
 This script requires Python 3.7 or later, and the following packages:
@@ -63,6 +62,4 @@ The categorize() function will read in the .srt file and categorize each subtitl
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
-
+Please make sure to verify results. This script has not been extensively bug-tested yet.
