@@ -18,7 +18,7 @@ query.txt
 0  action potential practices
 19  visualization versus becoming
 
-.srt
+categorized.srt
 1
 00:00:01,000 --> 00:00:50,000
     == ' philosophy as therapy', %0.7924736290745549
