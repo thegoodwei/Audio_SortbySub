@@ -4,7 +4,12 @@
 
 .m4a audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT file. 
 
-This Python script attempts to automate the research process for interview transcripts. There is an error rate on autotranscribe, which downstreams to the ADA-002-Embedding AI model. Accuracy could be improved with 10gb vram, and this is early beta untested code so the output might need human corrections and verification of accuracy. See example for output: https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
+This Python script attempts to automate the research process for interview transcripts. There is an error rate on autotranscribe that could be improved with the Whisper API, or locally with 10gb vram.
+
+The ADA-002-Embedding AI model seems quite accurate with short phrases but could be derailed by autotranscribe, so the output will need human verification for accuracy. 
+
+See example podcast output: ![example](/example/philosophy-of-meditation-vervaeke.txt)
+https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
 
 Instructions below
 
