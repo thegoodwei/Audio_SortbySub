@@ -8,10 +8,6 @@ This Python script attempts to automate the research process for interview trans
 See example podcast output: ![]()
 https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
 
-#### Instructions Below:
-
-![/example/philosophy-of-meditation-vervaeke.txt](icon.svg)
-
 ### Methodology:
 
 Automatic speech recognition (ASR): We use the PyDub library to convert the audio files to mono WAV format, and then pass them through the Whisper automatic transcription, using WhisperX for word-by-word timecode alignment. The resulting .srt subtitles are saved as JSON.
@@ -64,7 +60,11 @@ python
 
 The categorize() function will read in the .srt file and categorize each subtitle according to the closest category embedding. The output categorized .srt file will be saved to the path specified in output_path. The function returns a string representing the path of the output categorized srt file.
 
+#### Instructions Below:
+
+![/example/philosophy-of-meditation-vervaeke.txt](icon.svg)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to verify results. This script has not been extensively bug-tested yet.
+Please make sure to verify results. This script has not been extensively bug-tested. yet... :)
