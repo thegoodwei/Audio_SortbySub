@@ -5,7 +5,7 @@ This Python script attempts to automate the qualitative research process by pars
 
 .m4a audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT file. 
 
-See example output from the podcast/lecture series After Socrates: [Example Output](examples/AfterSocratesEP7.txt)
+See example output from the podcast/lecture series After Socrates: [Example Output](example/AfterSocratesEP7.txt)
 https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/AfterSocratesEP7.txt
 
 Note there is an error rate on autotranscribe that could be improved with the Whisper large v2 model via API, or locally with 10gb vram for 'large' model. The text-embedding-ada-002 OpenAI model for vectorization of language seems quite accurate for comparing short phrases, however the output will need human verification for accuracy. 
