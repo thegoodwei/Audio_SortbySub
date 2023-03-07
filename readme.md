@@ -60,11 +60,8 @@ python
 
 The categorize() function will read in the .srt file and categorize each subtitle according to the closest category embedding. The output categorized .srt file will be saved to the path specified in output_path. The function returns a string representing the path of the output categorized srt file.
 
-#### Instructions Below:
+####  Contributing:
 
 ![/example/philosophy-of-meditation-vervaeke.txt](icon.svg)
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to verify results. This script has not been extensively bug-tested. yet... :)
+ This script has not been extensively bug-tested. yet... :)
