@@ -6,6 +6,7 @@ import csv
 import sqlite3
 import numpy as np
 import srt
+import time
 import json
 import ffmpeg
 import whisper
@@ -193,7 +194,7 @@ def create_srt_transcript(input_file, output_file: str, device: str = "cuda") ->
     if device == "cuda":
         print(input_file)
     #try:
-        model = whisperx.load_model("medium.en", device)# ("medium", device)
+        model = whisperx.load_model("medium.en", device)# Use ("large, device") if you have 10gb vram or else use Whisper API largev2 for improved transcription
         result = model.transcribe(input_file) 
         # Load the alignment model and metadata
         model_a, metadata = whisperx.load_align_model(language_code=result["language"], device=device)
@@ -297,6 +298,8 @@ def get_embeddings(srt_file, db_file):
     subtitles = c.fetchall()
     # Get the text of the subtitles
     for time_start,time_end,sub_text in subtitles:
+        print("...")
+        time.sleep(60/250) #(delay_in_seconds) 60/ Rate limit per minute 
         response = openai.Embedding.create(model="text-embedding-ada-002", input=sub_text)
         embedding = response["data"][0]["embedding"]
         c.execute("UPDATE subtitles SET embeddings = ? WHERE start = ? AND end = ? AND srt_file = ?", (json.dumps(embedding), time_start, time_end, srt_file))
@@ -305,7 +308,7 @@ def get_embeddings(srt_file, db_file):
         # print(format_time(time_end))
     # Close the connection
     conn.close()
-    print("Embedded meanings and associations found for every soundbite-sub.")
+    print("Embedded meanings and associations found for every sub.")
     print(" ...")
 
 
@@ -346,6 +349,8 @@ def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
     category_embeddings = []
     for category in cat_list:
       # Get the embeddings for the query
+      time.sleep(.25)#delay in seconds
+      print(".")
       response = openai.Embedding.create(model="text-embedding-ada-002", input=category)
       category_embeddings.append((category, response["data"][0]["embedding"]))
     conn.close()
@@ -408,7 +413,6 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
             if simscore > similarity:
                similarity = simscore
                relevant_category = category
-        
         # Insert data into the temporary database
         memc.execute("INSERT INTO subtitles VALUES (?,?,?,?,?)", (time_start, time_end,  relevant_category, similarity, sub_text))
         memconn.commit()
@@ -432,46 +436,54 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
         # Print the results
         #category_similarity_str = str("CATEGORY:'" + categorized + "'==" + (similarity_score) + "% ")
         print(time_start, time_end, "\n", categorized, "==", similarity_score, "\n", sub_text)
-        categorized_subtext =  str("    == '" + categorized + "', %" + str(similarity_score) +  "\n" + sub_text + "\n \n") # "\n".join([category_similarity_str, sub_text, "\n\n"])
+        categorized_subtext =  str("     ~'" + categorized + "'==" + str(similarity_score) +  "% \n" + sub_text + "\n \n") # "\n".join([category_similarity_str, sub_text, "\n\n"])
         categorized_subs.append(srt.Subtitle(index=index, start=time_start, end=time_end, content=categorized_subtext))
         index+=1
-    print("Categories Parsed for:")
-    #    print(input_string)
-    print(category_counter)
-    categoryct_txt = "categoryresults_" + os.path.splitext(os.path.basename(input_file))[0] + ".txt"
-
-    with open(categoryct_txt, 'w+') as f:
-        for i, (cat, qty) in enumerate(category_counter):
-            f.write(str(str(qty) + " " + cat + "\n"))
-    print(categoryct_txt)
-    f.close()
+    category_results = sorted(category_counter, key=lambda x: x[1], reverse=True)
+    #print("Categories Parsed for:")
+    #print(input_string)
+    category_qty_list = ""
+    #category_result_filename = "categoryresults_" + os.path.splitext(os.path.basename(input_file))[0] + ".txt"
+    #with open(category_result_filename, 'w+') as f:
+    for i, (cat, qty) in enumerate(category_results):
+            category_qty_list += str(str(qty) + ", " + cat + ",\n")
+            #f.write(str(str(qty) + ", " + cat + ",\n"))
+    #    f.write(category_results_string)
+    #print(category_result_filename)
+    #f.close()
+    category_results_string = ""
+    category_results_string = str("INPUT: \n File:" + input_file + "\n" + "Quote Length apx:" + minimum_length + " Seconds, \n Categories Prompted: " + input_string + "\n\n RESULTS: \n Qty per Category: \n" + category_qty_list + "\n \n \n")
+    #Add the query results to the top of the subtitle for easy reading of one single output file
 
     if os.path.exists(output_path):
         os.remove(output_path)
     with open(output_path, 'w+') as f:
+        f.write(category_results_string)
         f.write(srt.make_legal_content(srt.compose(categorized_subs)))
     f.close()
+    print(category_results_string)
     print("written final categorized subs to file")
     print(output_path)
     return output_path
-      
 
-def m4a_to_srt_categorized(input_file, input_string):
+
+def m4a_to_srt_categorized(input_file, input_string, output_file):
   transcribed_subtitles = setup(input_file)
   print(transcribed_subtitles)
   print("getting embeddings for categories: " + input_string)
   categories = get_categories(input_string)
-  outfilename = "categorized_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
-  categorize(transcribed_subtitles, categories, outfilename, db_file)
+  categorize(transcribed_subtitles, categories, output_file, db_file)
 
 
 if __name__ == "__main__":
-  m4a_to_srt_categorized(input_file, input_string)
+  output_file = "categorized_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
+  m4a_to_srt_categorized(input_file, input_string, output_file)
 #batch
-#  for filepath in glob.glob(os.path.join(input_file, "*.srt")):
+#   counter = 0
+#  for filepath in glob.glob(os.path.join(input_file, "*.m4a")):
 #      counter +=1
 #      db_file = "data" + counter + ".db"
 #      filename = os.path.splitext(os.path.basename(filepath))[0]
-#      output_path = os.path.join(input_file, "codecategorized_" + filename + ".txt")
-#      categorize(filepath, categories, output_path, counter)
+#      output_path = str("categorized_" + filename + ".txt")
+#      m4a_to_srt_categorized(filepath, input_string, output_path)
 #  
