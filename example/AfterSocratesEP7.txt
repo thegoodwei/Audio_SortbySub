@@ -1,7 +1,7 @@
 INPUT: 
  File:ep7.m4a
 Quote Length apx:30 Seconds, 
- Categoriess Prompted: guided practice making frame and breaking frame, the inner self as experience, phenomonological state of being, the tragedy of modal confusion, the path to happiness, the process of enlightenment, acceptance of everything everywhere as it is, philosophy as therapy, mindfulness as the machinery of wisdom, overcoming struggles through practice, training the self to see the self, romance as a spirituality of love, finding happiness in community, simulation theory as nihilism, simulation theory as enlightenment, transcendence in the metaverse, transcendence in the flow state, uprooting paranoia, the root of anxiety, the purpose of human existence, methodology of self development, pain and suffering, peace and happiness, truth and the unknowable, definitions of reality, relational co-identification, what is insight
+ Categories Prompted: guided practice making frame and breaking frame, the inner self as experience, phenomonological state of being, the tragedy of modal confusion, the path to happiness, the process of enlightenment, acceptance of everything everywhere as it is, philosophy as therapy, mindfulness as the machinery of wisdom, overcoming struggles through practice, training the self to see the self, romance as a spirituality of love, finding happiness in community, simulation theory as nihilism, simulation theory as enlightenment, transcendence in the metaverse, transcendence in the flow state, uprooting paranoia, the root of anxiety, the purpose of human existence, methodology of self development, pain and suffering, peace and happiness, truth and the unknowable, definitions of reality, relational co-identification, what is insight
 
  RESULTS: 
  Qty per Category: 
