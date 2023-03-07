@@ -11,12 +11,11 @@ The ADA-002-Embedding AI model seems quite accurate with short phrases but could
 See example podcast output: ![]()
 https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
 
-Instructions below
+#### Instructions Below:
 
 ![/example/philosophy-of-meditation-vervaeke.txt](icon.svg)
 
 ### Methodology:
-Our approach involves several steps:
 
 Automatic speech recognition (ASR): We use the PyDub library to convert the audio files to mono WAV format, and then pass them through the Whisper automatic transcription, using WhisperX for word-by-word timecode alignment. The resulting .srt subtitles are saved as JSON.
 
