@@ -1,24 +1,24 @@
-https://youtu.be/vHJsaSc5rFc
-.m4a + query =>
+Categorization test with podcast: https://youtu.be/vHJsaSc5rFc
+philosophy-of-meditation-vervaeke.m4a + query.txt =>
 
-query_.txt
-83 romance is a spirituality of love
-27  guided practice making frame and breaking frame
+## query_.txt
 124  the inner self as experience
-4  phenomonological state of being
+104  philosophy as therapy
+83 romance is a spirituality of love
+61  mindfulness as the machinery of wisdom
+44  the process of enlightenment
+30  wanting
+27  guided practice making frame and breaking frame
 17  the tragedy of modal confusion
 11  the path to happiness
-44  the process of enlightenment
 9  acceptance of everything everywhere as it is
-104  philosophy as therapy
-61  mindfulness as the machinery of wisdom
+6  suffering
+4  phenomonological state of being
 0  flow state
 0  doing
-30  wanting
-6  suffering
 0  overcoming
 
-categorized_.srt
+## categorized_.srt
 1
 00:00:00,000 --> 00:00:50,000
     == ' finding happiness in community', %0.7957220610350229
