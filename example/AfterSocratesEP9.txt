@@ -1,0 +1,576 @@
+INPUT: 
+ File:ep9.m4a 
+Quote Length apx:60 Seconds, 
+ Categoriess Prompted: guided practice making frame and breaking frame, the inner self as experience, phenomonological state of being, the tragedy of modal confusion, the path to happiness, the process of enlightenment, acceptance of everything everywhere as it is, philosophy as therapy, mindfulness as the machinery of wisdom, overcoming struggles through practice, training the self to see the self, romance as a spirituality of love, finding happiness in community, simulation theory as nihilism, simulation theory as enlightenment, transcendence in the metaverse, transcendence in the flow state, uprooting paranoia, the root of anxiety, the purpose of human existence, methodology of self development, pain and suffering, peace and happiness, truth and the unknowable, definitions of reality, relational co-identification
+
+ RESULTS: 
+ Qty per Category: 
+26,  the process of enlightenment,
+24,  philosophy as therapy,
+14,  truth and the unknowable,
+8,  mindfulness as the machinery of wisdom,
+8,  training the self to see the self,
+6,  transcendence in the flow state,
+4,  phenomonological state of being,
+4,  uprooting paranoia,
+4,  methodology of self development,
+2,  the inner self as experience,
+2,  acceptance of everything everywhere as it is,
+2,  romance as a spirituality of love,
+2,  the purpose of human existence,
+2,  definitions of reality,
+0, guided practice making frame and breaking frame,
+0,  the tragedy of modal confusion,
+0,  the path to happiness,
+0,  overcoming struggles through practice,
+0,  finding happiness in community,
+0,  simulation theory as nihilism,
+0,  simulation theory as enlightenment,
+0,  transcendence in the metaverse,
+0,  the root of anxiety,
+0,  pain and suffering,
+0,  peace and happiness,
+0,  relational co-identification,
+
+
+
+Timecode =='most relevant category', %similarity_score1
+00:00:00,000 --> 00:01:13,000
+    == ' mindfulness as the machinery of wisdom', %0.7676888952114799
+are intentions, offering rational justification purity dress service purity bullshit. making catchy appearances do reality to us questioning reflecting seeking particular grounded code. Welcome nine.
+ 
+2
+00:00:00,000 --> 00:01:13,000
+    == ' mindfulness as the machinery of wisdom', %0.7676888952114799
+are intentions, offering rational justification purity dress service purity bullshit. making catchy appearances do reality to us questioning reflecting seeking particular grounded code. Welcome nine.
+ 
+3
+00:01:14,000 --> 00:02:20,000
+    == ' training the self to see the self', %0.8026546957748473
+continued long reverse looked dialogue, demonion Socrates dialogical who exploring self you Enriquez Mastropietro my called using intelligence cognition integration argumentation exemplify with collective self self, nevertheless really more topic, is to an dimension cultivation extending that are temporally,
+ 
+4
+00:01:14,000 --> 00:02:20,000
+    == ' training the self to see the self', %0.8026546957748473
+continued long reverse looked dialogue, demonion Socrates dialogical who exploring self you Enriquez Mastropietro my called using intelligence cognition integration argumentation exemplify with collective self self, nevertheless really more topic, is to an dimension cultivation extending that are temporally,
+ 
+5
+00:02:20,000 --> 00:03:33,000
+    == ' the process of enlightenment', %0.7728576618595527
+temporarily, we're temporally came Socrates' Plato, said wasn't separate Plato make two Plato, great Socrates. about those who episodes five Awakening Crisis, familiar. had model alluded couple he them semi-autonomous very talks an with are proportioned,
+ 
+6
+00:02:20,000 --> 00:03:33,000
+    == ' the process of enlightenment', %0.7728576618595527
+temporarily, we're temporally came Socrates' Plato, said wasn't separate Plato make two Plato, great Socrates. about those who episodes five Awakening Crisis, familiar. had model alluded couple he them semi-autonomous very talks an with are proportioned,
+ 
+7
+00:03:34,000 --> 00:04:40,000
+    == ' romance as a spirituality of love', %0.7945940949008573
+we religio world. proper we our landscaping, language, gets when drops deeply reality and that internalize like conform thing a anagogate, out that process which Platonic spirituality is something core meta-desires. meta-desire satisfies possess, our desires meta-desires want satisfy in causing conflict,
+ 
+8
+00:03:34,000 --> 00:04:40,000
+    == ' romance as a spirituality of love', %0.7945940949008573
+we religio world. proper we our landscaping, language, gets when drops deeply reality and that internalize like conform thing a anagogate, out that process which Platonic spirituality is something core meta-desires. meta-desire satisfies possess, our desires meta-desires want satisfy in causing conflict,
+ 
+9
+00:04:40,000 --> 00:05:52,000
+    == ' philosophy as therapy', %0.7957701725522643
+anxiety, We have satisfied not and process not opening world the ourselves coordinating ourselves with mutually satisfies those meta why case for happiness. comes scholarship dialectic has, especially dialogues Sophist Statesman, seems specific practice. clear dialectic. I scholars not, be it's do the involve practices collecting dividing what to taxonomy.
+ 
+10
+00:04:40,000 --> 00:05:52,000
+    == ' philosophy as therapy', %0.7957701725522643
+anxiety, We have satisfied not and process not opening world the ourselves coordinating ourselves with mutually satisfies those meta why case for happiness. comes scholarship dialectic has, especially dialogues Sophist Statesman, seems specific practice. clear dialectic. I scholars not, be it's do the involve practices collecting dividing what to taxonomy.
+ 
+11
+00:05:52,000 --> 00:06:55,000
+    == ' philosophy as therapy', %0.7596912956965804
+We have cats mammals things, doesn't Plato primarily although Aristotle grateful drive scientific important made repeatedly. you scientific four we'll important considered Neoplatonism, that taxonomic understanding collection argues,
+ 
+12
+00:05:52,000 --> 00:06:55,000
+    == ' philosophy as therapy', %0.7596912956965804
+We have cats mammals things, doesn't Plato primarily although Aristotle grateful drive scientific important made repeatedly. you scientific four we'll important considered Neoplatonism, that taxonomic understanding collection argues,
+ 
+13
+00:06:57,000 --> 00:08:04,000
+    == ' phenomonological state of being', %0.7786971099933154
+taking level. It's will of therefore, plausibly going we're relevance we're sense articulate And there these differentiation integration. So phenomenological analogy. things trying environment so coherent gestalt. I and blurred differentiated acuity that distinguish. what is toggling belonging sense,
+ 
+14
+00:06:57,000 --> 00:08:04,000
+    == ' phenomonological state of being', %0.7786971099933154
+taking level. It's will of therefore, plausibly going we're relevance we're sense articulate And there these differentiation integration. So phenomenological analogy. things trying environment so coherent gestalt. I and blurred differentiated acuity that distinguish. what is toggling belonging sense,
+ 
+15
+00:08:08,000 --> 00:09:11,000
+    == ' the process of enlightenment', %0.7741036899334166
+differentiating things people this moving to and categories discriminate categories. And probably first again recursive realization. to meta-optimal meta-orientation. doing trying that need between group into no that. depends problem, at situation. we that system, simultaneously and look Kelso about multistability brain.
+ 
+16
+00:08:08,000 --> 00:09:11,000
+    == ' the process of enlightenment', %0.7741036899334166
+differentiating things people this moving to and categories discriminate categories. And probably first again recursive realization. to meta-optimal meta-orientation. doing trying that need between group into no that. depends problem, at situation. we that system, simultaneously and look Kelso about multistability brain.
+ 
+17
+00:09:12,000 --> 00:10:27,000
+    == ' the inner self as experience', %0.7539500573593522
+that you're simultaneously you're distinguishing the simultaneously when that differentiation, system complex. complexifying. complexification produces and important different what taxonomic understanding. So biological you zygote, cells differentiate different cells, start organize, self-organize lungs hearts, lungs heart brain. simultaneously differentiating that body properties things can't connection between notion division driving complexification realization,
+ 
+18
+00:09:12,000 --> 00:10:27,000
+    == ' the inner self as experience', %0.7539500573593522
+that you're simultaneously you're distinguishing the simultaneously when that differentiation, system complex. complexifying. complexification produces and important different what taxonomic understanding. So biological you zygote, cells differentiate different cells, start organize, self-organize lungs hearts, lungs heart brain. simultaneously differentiating that body properties things can't connection between notion division driving complexification realization,
+ 
+19
+00:10:27,000 --> 00:11:37,000
+    == ' truth and the unknowable', %0.795065734431275
+so properly ratio religio complexity the continually generating emergent deal realities. lines Anagaghe that need that. of Aristotelian scientific taxonomy doing, about driving complexification cognition that appropriately, tracks well the world. Okay, Socrates has disciples, you because and him, one very that's fragments.
+ 
+20
+00:10:27,000 --> 00:11:37,000
+    == ' truth and the unknowable', %0.795065734431275
+so properly ratio religio complexity the continually generating emergent deal realities. lines Anagaghe that need that. of Aristotelian scientific taxonomy doing, about driving complexification cognition that appropriately, tracks well the world. Okay, Socrates has disciples, you because and him, one very that's fragments.
+ 
+21
+00:11:39,000 --> 00:12:39,000
+    == ' truth and the unknowable', %0.7634091087073352
+was Antistines. Antistines Cynics about, Awakening Antistines actually alive of Plato, and be personally he do He learned Socrates converse myself. talk we've inner dialectic dialogueos respect reflection.
+ 
+22
+00:11:39,000 --> 00:12:39,000
+    == ' truth and the unknowable', %0.7634091087073352
+was Antistines. Antistines Cynics about, Awakening Antistines actually alive of Plato, and be personally he do He learned Socrates converse myself. talk we've inner dialectic dialogueos respect reflection.
+ 
+23
+00:12:43,000 --> 00:13:58,000
+    == ' mindfulness as the machinery of wisdom', %0.7942634058711101
+ruminative speech anxiety distraction He's integrating Socrates into inner we oriented cultivation much were episode actually of this good opponent between antistines can to backwards understanding Socrates. least, proposing means to because to bloody so just these processing backwards deeply Socrates.
+ 
+24
+00:12:43,000 --> 00:13:58,000
+    == ' mindfulness as the machinery of wisdom', %0.7942634058711101
+ruminative speech anxiety distraction He's integrating Socrates into inner we oriented cultivation much were episode actually of this good opponent between antistines can to backwards understanding Socrates. least, proposing means to because to bloody so just these processing backwards deeply Socrates.
+ 
+25
+00:13:59,000 --> 00:15:07,000
+    == ' philosophy as therapy', %0.7703411921400259
+especially Socrates that attempts develop dialectic logos. making of a Susan an Prince Socrates, Antistines, Cynics Blackwell previously, right we've of strongly article So Socrates? on He propositional argumentation, which really scholarship Plato propositional argumentation beyond propositional.
+ 
+26
+00:13:59,000 --> 00:15:07,000
+    == ' philosophy as therapy', %0.7703411921400259
+especially Socrates that attempts develop dialectic logos. making of a Susan an Prince Socrates, Antistines, Cynics Blackwell previously, right we've of strongly article So Socrates? on He propositional argumentation, which really scholarship Plato propositional argumentation beyond propositional.
+ 
+27
+00:15:07,000 --> 00:16:14,000
+    == ' truth and the unknowable', %0.7721770215997917
+Antistines more, put extreme just some Christian that silence thought relationship attitudes language complex more Plato language, critical he have towards Antistines two Antistines, famous, famous precisely challenging first impossible what? circle, contradiction? possibly point these almost paradoxes.
+ 
+28
+00:15:07,000 --> 00:16:14,000
+    == ' truth and the unknowable', %0.7721770215997917
+Antistines more, put extreme just some Christian that silence thought relationship attitudes language complex more Plato language, critical he have towards Antistines two Antistines, famous, famous precisely challenging first impossible what? circle, contradiction? possibly point these almost paradoxes.
+ 
+29
+00:16:14,000 --> 00:17:17,000
+    == ' truth and the unknowable', %0.7987967391826923
+seem have respect think Socratic another similar other impossible define the making project definitions thinking can with what He's recapitulate all exegetical weight suggests were much didn't state should false. were koan-like,
+ 
+30
+00:16:14,000 --> 00:17:17,000
+    == ' truth and the unknowable', %0.7987967391826923
+seem have respect think Socratic another similar other impossible define the making project definitions thinking can with what He's recapitulate all exegetical weight suggests were much didn't state should false. were koan-like,
+ 
+31
+00:17:17,000 --> 00:18:23,000
+    == ' the process of enlightenment', %0.7657426680743391
+koan this provocations to attention redirect something. he's towards? quote, of discourse.'" Antisenes much clearly anti-definition, discourse Plato. really really opposed dialectic because primarily Socrates? Socrates Sure. so rejecter discourse and definition, tension what Socrates inner dialectic,
+ 
+32
+00:17:17,000 --> 00:18:23,000
+    == ' the process of enlightenment', %0.7657426680743391
+koan this provocations to attention redirect something. he's towards? quote, of discourse.'" Antisenes much clearly anti-definition, discourse Plato. really really opposed dialectic because primarily Socrates? Socrates Sure. so rejecter discourse and definition, tension what Socrates inner dialectic,
+ 
+33
+00:18:25,000 --> 00:19:28,000
+    == ' truth and the unknowable', %0.7745466227710045
+now tension apparently, the tradition, to offer, here, definition talks all Socrates Plato constantly seen. Antistines, the opposed logical argumentation a definition. koan, parable, explode and expect, suspect, was what it.
+ 
+34
+00:18:25,000 --> 00:19:28,000
+    == ' truth and the unknowable', %0.7745466227710045
+now tension apparently, the tradition, to offer, here, definition talks all Socrates Plato constantly seen. Antistines, the opposed logical argumentation a definition. koan, parable, explode and expect, suspect, was what it.
+ 
+35
+00:19:28,000 --> 00:20:33,000
+    == ' the process of enlightenment', %0.7812647985017066
+to Zen up provocative. is. Logos enunciation revealing what initial reactions. sense, response These quintessential Socratic Well friendship? is logos whatever the say much pronouncement.
+ 
+36
+00:19:28,000 --> 00:20:33,000
+    == ' the process of enlightenment', %0.7812647985017066
+to Zen up provocative. is. Logos enunciation revealing what initial reactions. sense, response These quintessential Socratic Well friendship? is logos whatever the say much pronouncement.
+ 
+37
+00:20:37,000 --> 00:21:41,000
+    == ' the process of enlightenment', %0.7507311839895239
+clear enunciating, pronouncing, senses Notice playing need pronouncing pronounce notice revealing, or articulation, clarification. somehow this pronouncement double discloses. Right, very especially religious Reveals, discloses But not or as it mind.
+ 
+38
+00:20:37,000 --> 00:21:41,000
+    == ' the process of enlightenment', %0.7507311839895239
+clear enunciating, pronouncing, senses Notice playing need pronouncing pronounce notice revealing, or articulation, clarification. somehow this pronouncement double discloses. Right, very especially religious Reveals, discloses But not or as it mind.
+ 
+39
+00:21:44,000 --> 00:23:07,000
+    == ' phenomonological state of being', %0.7568522828872041
+make make noticeable. adjective physical, know, pronounced, So, about Mateson's shown talks, notion What something, making between foreground. with landscaping. taking foregrounding configuring together. So background foreground foreground configured then configured in relevant problems, our in noticing pronounce themselves another statement sizing noticing intelligible something So the revelation,
+ 
+40
+00:21:44,000 --> 00:23:07,000
+    == ' phenomonological state of being', %0.7568522828872041
+make make noticeable. adjective physical, know, pronounced, So, about Mateson's shown talks, notion What something, making between foreground. with landscaping. taking foregrounding configuring together. So background foreground foreground configured then configured in relevant problems, our in noticing pronounce themselves another statement sizing noticing intelligible something So the revelation,
+ 
+41
+00:23:07,000 --> 00:24:11,000
+    == ' transcendence in the flow state', %0.7962503169838449
+disclosure, appearing, pronouncement put that disjunction? not we're an putting and flow between aspects he's probably, probably influenced by and was Heraclitus. Heraclitus Stoics, probably Cynics, and considered both Heraclitus this everything flow,
+ 
+42
+00:23:07,000 --> 00:24:11,000
+    == ' transcendence in the flow state', %0.7962503169838449
+disclosure, appearing, pronouncement put that disjunction? not we're an putting and flow between aspects he's probably, probably influenced by and was Heraclitus. Heraclitus Stoics, probably Cynics, and considered both Heraclitus this everything flow,
+ 
+43
+00:24:11,000 --> 00:25:11,000
+    == ' transcendence in the flow state', %0.779761721586554
+flux, not logos line, opposites been in don't my listen logos within them. things Heraclitus. brought into so definition. something definition explodes definitional appreciate the profound Antistines saying, doing,
+ 
+44
+00:24:11,000 --> 00:25:11,000
+    == ' transcendence in the flow state', %0.779761721586554
+flux, not logos line, opposites been in don't my listen logos within them. things Heraclitus. brought into so definition. something definition explodes definitional appreciate the profound Antistines saying, doing,
+ 
+45
+00:25:13,000 --> 00:26:16,000
+    == ' the process of enlightenment', %0.7934641214072226
+Plato unfolding things like And goes is bring everything convey provocatively, redirect attention reorient to attention reorient logos proposing in mind, Logos I'm do Logos to eidetic adduction we've than know,
+ 
+46
+00:25:13,000 --> 00:26:16,000
+    == ' the process of enlightenment', %0.7934641214072226
+Plato unfolding things like And goes is bring everything convey provocatively, redirect attention reorient to attention reorient logos proposing in mind, Logos I'm do Logos to eidetic adduction we've than know,
+ 
+47
+00:26:18,000 --> 00:27:20,000
+    == ' philosophy as therapy', %0.7713355043386989
+rejected theory Aristotelian interpretation logical as host probably reading What rejected precisely it presented course but idea entities people to whether Plato's argued going it's being framework, Antistines be take away from logos him.
+ 
+48
+00:26:18,000 --> 00:27:20,000
+    == ' philosophy as therapy', %0.7713355043386989
+rejected theory Aristotelian interpretation logical as host probably reading What rejected precisely it presented course but idea entities people to whether Plato's argued going it's being framework, Antistines be take away from logos him.
+ 
+49
+00:27:21,000 --> 00:28:24,000
+    == ' the process of enlightenment', %0.7889868373285698
+this to other one, had know for and Zen-like provocation, but specifically here? all, it attention reorient redirecting, how propositional itself. So the proposition, Antistines process that proposition, especially subject proposition.
+ 
+50
+00:27:21,000 --> 00:28:24,000
+    == ' the process of enlightenment', %0.7889868373285698
+this to other one, had know for and Zen-like provocation, but specifically here? all, it attention reorient redirecting, how propositional itself. So the proposition, Antistines process that proposition, especially subject proposition.
+ 
+51
+00:28:25,000 --> 00:29:44,000
+    == ' the process of enlightenment', %0.7786546973998799
+how we something came something proposition. to the people disagreeing disagreeing importantly, the they're philosophically, this Wittgenstein, but aside. was level propositions, orientation, we've even orientation, fundamental the the orientation from people orientation process from that sizing propositional philosophical people had orientation and realize same relevant.
+ 
+52
+00:28:25,000 --> 00:29:44,000
+    == ' the process of enlightenment', %0.7786546973998799
+how we something came something proposition. to the people disagreeing disagreeing importantly, the they're philosophically, this Wittgenstein, but aside. was level propositions, orientation, we've even orientation, fundamental the the orientation from people orientation process from that sizing propositional philosophical people had orientation and realize same relevant.
+ 
+53
+00:29:44,000 --> 00:30:59,000
+    == ' truth and the unknowable', %0.7792936591440761
+They proximity implications, contradict So brilliant into and is propositions only fact disoriented from difference. disoriented from contradicting sure always times actually specific hypotheses propositions, I need to we reflecting results theologos properties practiced reverse project.
+ 
+54
+00:29:44,000 --> 00:30:59,000
+    == ' truth and the unknowable', %0.7792936591440761
+They proximity implications, contradict So brilliant into and is propositions only fact disoriented from difference. disoriented from contradicting sure always times actually specific hypotheses propositions, I need to we reflecting results theologos properties practiced reverse project.
+ 
+55
+00:30:59,000 --> 00:32:00,000
+    == ' training the self to see the self', %0.7587309455002561
+what have writings, not writing criticizes his adopted. Prince's show saying so we we've Okay, conversation between minded think that talking fails apparently him, root education improvement individual Okay, Socratic. takes obliquely. to
+ 
+56
+00:30:59,000 --> 00:32:00,000
+    == ' training the self to see the self', %0.7587309455002561
+what have writings, not writing criticizes his adopted. Prince's show saying so we we've Okay, conversation between minded think that talking fails apparently him, root education improvement individual Okay, Socratic. takes obliquely. to
+ 
+57
+00:32:08,000 --> 00:33:17,000
+    == ' the process of enlightenment', %0.780801679973224
+the participatory. exchange literal propositions analysis This expansive engagement conceptual fields verbal examining name meanings, seeing worlds considering change ultimately of discourse rather accuracy range. lot eidetic dimensions out important with adduction,
+ 
+58
+00:32:08,000 --> 00:33:17,000
+    == ' the process of enlightenment', %0.780801679973224
+the participatory. exchange literal propositions analysis This expansive engagement conceptual fields verbal examining name meanings, seeing worlds considering change ultimately of discourse rather accuracy range. lot eidetic dimensions out important with adduction,
+ 
+59
+00:33:17,000 --> 00:34:21,000
+    == ' philosophy as therapy', %0.78487954457005
+phenomenological exploration, about didylogose. aspect specific attitude language, trying than everything logoi, plural instances logos dia really word ascetic made original kind The original They ascesis involving labor.
+ 
+60
+00:33:17,000 --> 00:34:21,000
+    == ' philosophy as therapy', %0.78487954457005
+phenomenological exploration, about didylogose. aspect specific attitude language, trying than everything logoi, plural instances logos dia really word ascetic made original kind The original They ascesis involving labor.
+ 
+61
+00:34:23,000 --> 00:35:33,000
+    == ' the process of enlightenment', %0.7884290944680217
+what actually engaging practices involve part. attitude towards arguments. language work, important training, spiritual exercise. much people the Nazareth parable, makers. Jesus Gautama, and different using whole parables that work a practice getting show something that so doing.
+ 
+62
+00:34:23,000 --> 00:35:33,000
+    == ' the process of enlightenment', %0.7884290944680217
+what actually engaging practices involve part. attitude towards arguments. language work, important training, spiritual exercise. much people the Nazareth parable, makers. Jesus Gautama, and different using whole parables that work a practice getting show something that so doing.
+ 
+63
+00:35:34,000 --> 00:36:48,000
+    == ' philosophy as therapy', %0.7828251954162465
+something Plato of offers Cohen's writings reputation apparently would and conversations exploratory inducing trying with show shows what thought because symposium says praises Antistines matchmaker. Like Antistines how people himself with fit in is logoi,
+ 
+64
+00:35:34,000 --> 00:36:48,000
+    == ' philosophy as therapy', %0.7828251954162465
+something Plato of offers Cohen's writings reputation apparently would and conversations exploratory inducing trying with show shows what thought because symposium says praises Antistines matchmaker. Like Antistines how people himself with fit in is logoi,
+ 
+65
+00:36:49,000 --> 00:37:52,000
+    == ' philosophy as therapy', %0.7817930130582835
+practices, exercises, types were interlocking supporting. strengthens think how service logos antistines. So logoi training, gymnasia, gymnasium, wrestling, you good Kelly know, Socrates soldier nickname. broad wrestler and and other. interwoven. antistines. sees doing to doing gymnasium, You're anything.
+ 
+66
+00:36:49,000 --> 00:37:52,000
+    == ' philosophy as therapy', %0.7817930130582835
+practices, exercises, types were interlocking supporting. strengthens think how service logos antistines. So logoi training, gymnasia, gymnasium, wrestling, you good Kelly know, Socrates soldier nickname. broad wrestler and and other. interwoven. antistines. sees doing to doing gymnasium, You're anything.
+ 
+67
+00:37:53,000 --> 00:39:21,000
+    == ' training the self to see the self', %0.8353812786399395
+So losing not really training develop skills virtues optimal orienting metal Remember training. clarity was. self-image, self-reference, self-relevance. you Sort we're people's we offend be shamed anything was about have relationship around three Prince phronesis.
+ 
+68
+00:37:53,000 --> 00:39:21,000
+    == ' training the self to see the self', %0.8353812786399395
+So losing not really training develop skills virtues optimal orienting metal Remember training. clarity was. self-image, self-reference, self-relevance. you Sort we're people's we offend be shamed anything was about have relationship around three Prince phronesis.
+ 
+69
+00:39:21,000 --> 00:40:38,000
+    == ' mindfulness as the machinery of wisdom', %0.8072058021792919
+two phronesis. Sophia doing, comprehensive understanding structures intelligibility. your cognition situation it much context contextually sensitive to situation. close, what online realization happening in consciousness we're problems. it wisdom, opposed comes means doesn't mean getting line capitalism so money no,
+ 
+70
+00:39:21,000 --> 00:40:38,000
+    == ' mindfulness as the machinery of wisdom', %0.8072058021792919
+two phronesis. Sophia doing, comprehensive understanding structures intelligibility. your cognition situation it much context contextually sensitive to situation. close, what online realization happening in consciousness we're problems. it wisdom, opposed comes means doesn't mean getting line capitalism so money no,
+ 
+71
+00:40:39,000 --> 00:41:40,000
+    == ' training the self to see the self', %0.7991592769489804
+Aristotle really knowing, it's angry it's right right your fittedness. Antistines trainings shape capacity, recursive realization. thing. not recommend, we kind training that Obviously, books started. this, observation it.
+ 
+72
+00:40:39,000 --> 00:41:40,000
+    == ' training the self to see the self', %0.7991592769489804
+Aristotle really knowing, it's angry it's right right your fittedness. Antistines trainings shape capacity, recursive realization. thing. not recommend, we kind training that Obviously, books started. this, observation it.
+ 
+73
+00:41:40,000 --> 00:42:40,000
+    == ' the process of enlightenment', %0.765209997602828
+There's a sort movement it's really students with improv cultivation Manual Improvisation Charna Howard is Handbook, to Improvising Comedy, Beyond, Tom Solinsky Frances specific this why what playing Dragons,
+ 
+74
+00:41:40,000 --> 00:42:40,000
+    == ' the process of enlightenment', %0.765209997602828
+There's a sort movement it's really students with improv cultivation Manual Improvisation Charna Howard is Handbook, to Improvising Comedy, Beyond, Tom Solinsky Frances specific this why what playing Dragons,
+ 
+75
+00:42:44,000 --> 00:43:55,000
+    == ' transcendence in the flow state', %0.7717889581845233
+action playing, up move space actually then beyond jeep prevalent Scandinavian into dungeon or she'll okay, specific speak you're is is is cetera, this shifting, identities, assigning and improv will like they're scenes switch another Because trying flow,
+ 
+76
+00:42:44,000 --> 00:43:55,000
+    == ' transcendence in the flow state', %0.7717889581845233
+action playing, up move space actually then beyond jeep prevalent Scandinavian into dungeon or she'll okay, specific speak you're is is is cetera, this shifting, identities, assigning and improv will like they're scenes switch another Because trying flow,
+ 
+77
+00:43:55,000 --> 00:45:04,000
+    == ' philosophy as therapy', %0.7560034331617866
+improv phenomena is distinction between happening down. So actually playing game, you're serious of actually life I because later doing this provocation a improv, art. So to note Antissanes emphasizing horizontal axis dialectic,
+ 
+78
+00:43:55,000 --> 00:45:04,000
+    == ' philosophy as therapy', %0.7560034331617866
+improv phenomena is distinction between happening down. So actually playing game, you're serious of actually life I because later doing this provocation a improv, art. So to note Antissanes emphasizing horizontal axis dialectic,
+ 
+79
+00:45:06,000 --> 00:46:25,000
+    == ' methodology of self development', %0.7855110797499513
+and embodied improvisational creative talking emphasize and it ignored crushed logic making about co-orientation. need harmonious conversation makes are co-oriented before exploration reflection important. get very The and literally read interested movement its Brock Marie-Odaly Goulay-Kazay.
+ 
+80
+00:45:06,000 --> 00:46:25,000
+    == ' methodology of self development', %0.7855110797499513
+and embodied improvisational creative talking emphasize and it ignored crushed logic making about co-orientation. need harmonious conversation makes are co-oriented before exploration reflection important. get very The and literally read interested movement its Brock Marie-Odaly Goulay-Kazay.
+ 
+81
+00:46:29,000 --> 00:47:42,000
+    == ' truth and the unknowable', %0.770425178818801
+especially, heard watched Crisis, bring meaning meaning who suspects always agenda, motive, goal. by suspicion. Appearances misleading something going behind. anything not ancient cynicism. so telling has for not that's all. about hermeneutics distinguish appearances us appearances take reality reorient us,
+ 
+82
+00:46:29,000 --> 00:47:42,000
+    == ' truth and the unknowable', %0.770425178818801
+especially, heard watched Crisis, bring meaning meaning who suspects always agenda, motive, goal. by suspicion. Appearances misleading something going behind. anything not ancient cynicism. so telling has for not that's all. about hermeneutics distinguish appearances us appearances take reality reorient us,
+ 
+83
+00:47:42,000 --> 00:48:42,000
+    == ' uprooting paranoia', %0.7654936305923151
+of into appearances that reality. And those appearances Look, illusion, unreal, dependent saying, to Marleponte and in hermeneutics is dependent, parasitic hermeneutics If the appearances distracted led never act up attitude undermines its performative performative you propositions,
+ 
+84
+00:47:42,000 --> 00:48:42,000
+    == ' uprooting paranoia', %0.7654936305923151
+of into appearances that reality. And those appearances Look, illusion, unreal, dependent saying, to Marleponte and in hermeneutics is dependent, parasitic hermeneutics If the appearances distracted led never act up attitude undermines its performative performative you propositions,
+ 
+85
+00:48:45,000 --> 00:49:52,000
+    == ' philosophy as therapy', %0.7733726272529484
+perspectival participatory so kind contradictions not people notice performative contradictions. provocative, often improvised, performative famous. So the disciple Antisenes into in carrying around. become prototype It's Tarot, Zeppelin get you marketplace? for that's Diogenes notice,
+ 
+86
+00:48:45,000 --> 00:49:52,000
+    == ' philosophy as therapy', %0.7733726272529484
+perspectival participatory so kind contradictions not people notice performative contradictions. provocative, often improvised, performative famous. So the disciple Antisenes into in carrying around. become prototype It's Tarot, Zeppelin get you marketplace? for that's Diogenes notice,
+ 
+87
+00:49:56,000 --> 00:51:42,000
+    == ' philosophy as therapy', %0.7627095302520004
+you. marketplace all walked don't looking you're should looking and actually relying haven't Honest marketplace? not making Marxist you it story Alexander about Diogenes outside We'll He dog. That's meaning philosopher. Alexander Here's the was of knot horse he cutting showing mortal demigod like master In it military etcetera To comes offer you honest looks says,
+ 
+88
+00:49:56,000 --> 00:51:42,000
+    == ' philosophy as therapy', %0.7627095302520004
+you. marketplace all walked don't looking you're should looking and actually relying haven't Honest marketplace? not making Marxist you it story Alexander about Diogenes outside We'll He dog. That's meaning philosopher. Alexander Here's the was of knot horse he cutting showing mortal demigod like master In it military etcetera To comes offer you honest looks says,
+ 
+89
+00:51:42,000 --> 00:53:16,000
+    == ' uprooting paranoia', %0.767272388296868
+move left? my few Alexander doing? so some regard yucky. from first versions into marketplace with in They're do probably this doing? didn't Gave person stealing lying misdirecting exploitation marketplace redirect attention reorient important reorientation,
+ 
+90
+00:51:42,000 --> 00:53:16,000
+    == ' uprooting paranoia', %0.767272388296868
+move left? my few Alexander doing? so some regard yucky. from first versions into marketplace with in They're do probably this doing? didn't Gave person stealing lying misdirecting exploitation marketplace redirect attention reorient important reorientation,
+ 
+91
+00:53:18,000 --> 00:54:35,000
+    == ' acceptance of everything everywhere as it is', %0.7651417565634289
+all especially The reject convention, they shaming, honouring around what like conventions conventional? regard man-made, artificial. long-standing, to decay. set identity ultimately frustrate shame pretend shamed that conventional somehow truly way really can't really kind bullshit.
+ 
+92
+00:53:18,000 --> 00:54:35,000
+    == ' acceptance of everything everywhere as it is', %0.7651417565634289
+all especially The reject convention, they shaming, honouring around what like conventions conventional? regard man-made, artificial. long-standing, to decay. set identity ultimately frustrate shame pretend shamed that conventional somehow truly way really can't really kind bullshit.
+ 
+93
+00:54:36,000 --> 00:55:44,000
+    == ' definitions of reality', %0.7832931366224514
+It's salient way or reality. have here purity is violated stabilize rational not because don't So happens in underwear, I'm the conventions which status preserved violated, and I do happened justification,
+ 
+94
+00:54:36,000 --> 00:55:44,000
+    == ' definitions of reality', %0.7832931366224514
+It's salient way or reality. have here purity is violated stabilize rational not because don't So happens in underwear, I'm the conventions which status preserved violated, and I do happened justification,
+ 
+95
+00:55:44,000 --> 00:57:11,000
+    == ' the purpose of human existence', %0.7634608303660819
+justification. his like, moral that code, does we deal intend cause to you're the you're both case, guilty matter person, there justification needed propose moral legislative we're the trying wake they're attention shaming intentions,
+ 
+96
+00:55:44,000 --> 00:57:11,000
+    == ' the purpose of human existence', %0.7634608303660819
+justification. his like, moral that code, does we deal intend cause to you're the you're both case, guilty matter person, there justification needed propose moral legislative we're the trying wake they're attention shaming intentions,
+ 
+97
+00:57:14,000 --> 00:58:24,000
+    == ' the process of enlightenment', %0.7729077644903339
+not rational justification claims. can in the but form salient certain track dissuade from reflecting or particular is purity that codes, codes, ridiculous. blind own can Moral cultivation bound cynic moral laws.
+ 
+98
+00:57:14,000 --> 00:58:24,000
+    == ' the process of enlightenment', %0.7729077644903339
+not rational justification claims. can in the but form salient certain track dissuade from reflecting or particular is purity that codes, codes, ridiculous. blind own can Moral cultivation bound cynic moral laws.
+ 
+99
+00:58:24,000 --> 00:59:32,000
+    == ' mindfulness as the machinery of wisdom', %0.7890681422932128
+things moral us cynics because was responsive causal reality what cynics importance non-propositional orientation, metanoia, changing notice oriented. metanoia directed really this Waking their contradictions, up between moral moral conducive cultivating and reality.
+ 
+100
+00:58:24,000 --> 00:59:32,000
+    == ' mindfulness as the machinery of wisdom', %0.7890681422932128
+things moral us cynics because was responsive causal reality what cynics importance non-propositional orientation, metanoia, changing notice oriented. metanoia directed really this Waking their contradictions, up between moral moral conducive cultivating and reality.
+ 
+101
+00:59:40,000 --> 01:00:49,000
+    == ' philosophy as therapy', %0.7856582190228627
+Logos exercise labor, co-trained training Phronesis, co-orientation Antistines That co-orientation about, remember conversations, it's religio other And important between agreement thing, ratio religio co-orientation, can together in Socratic, remember, circles to to internalize internalize enhancements horizontal dimension practice alogos?
+ 
+102
+00:59:40,000 --> 01:00:49,000
+    == ' philosophy as therapy', %0.7856582190228627
+Logos exercise labor, co-trained training Phronesis, co-orientation Antistines That co-orientation about, remember conversations, it's religio other And important between agreement thing, ratio religio co-orientation, can together in Socratic, remember, circles to to internalize internalize enhancements horizontal dimension practice alogos?
+ 
+103
+01:00:50,000 --> 01:01:50,000
+    == ' the process of enlightenment', %0.7657432657013632
+Of alogos. bring is do, need How what with diogenes internal interdiologos? matches better internal interdiologos. processing. How integrate Socrates Socrates stereoscopically these processing deeply the Socratic internalize order practice logos?
+ 
+104
+01:00:50,000 --> 01:01:50,000
+    == ' the process of enlightenment', %0.7657432657013632
+Of alogos. bring is do, need How what with diogenes internal interdiologos? matches better internal interdiologos. processing. How integrate Socrates Socrates stereoscopically these processing deeply the Socratic internalize order practice logos?
+ 
+105
+01:01:55,000 --> 01:02:55,000
+    == ' methodology of self development', %0.8051851761919764
+practice. practices group from Stoics. However, again recommend dimension Gentle Persuasion. Verbal Aikido, directing attacks a outcome. art internal And fall put done communication, language empathy,
+ 
+106
+01:01:55,000 --> 01:02:55,000
+    == ' methodology of self development', %0.8051851761919764
+practice. practices group from Stoics. However, again recommend dimension Gentle Persuasion. Verbal Aikido, directing attacks a outcome. art internal And fall put done communication, language empathy,
+ 
+107
+01:02:57,000 --> 01:03:39,000
+    == ' philosophy as therapy', %0.7876772013736629
+third world context get harmonious conversations apply virtues are practices much time, and special which going promise through practices for
+ 
+108
+01:02:57,000 --> 01:03:39,000
+    == ' philosophy as therapy', %0.7876772013736629
+third world context get harmonious conversations apply virtues are practices much time, and special which going promise through practices for
+ 
