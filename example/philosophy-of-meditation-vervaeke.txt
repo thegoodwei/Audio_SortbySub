@@ -1,7 +1,7 @@
 Categorization test with podcast: https://youtu.be/vHJsaSc5rFc
 philosophy-of-meditation-vervaeke.m4a + query.txt =>
 
-## query_.txt
+query_.txt
 124  the inner self as experience
 104  philosophy as therapy
 83 romance is a spirituality of love
