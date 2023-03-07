@@ -4,7 +4,7 @@
 
 This Python script attempts to automate the research process of coding interview transcripts. 
 
-![aiicon](aiicon.svg)
+![icon](icon.svg)
 
 ### Methodology:
 Our approach involves several steps:
