@@ -1,0 +1,567 @@
+INPUT: 
+ File:ep7.m4a
+Quote Length apx:30 Seconds, 
+ Categoriess Prompted: guided practice making frame and breaking frame, the inner self as experience, phenomonological state of being, the tragedy of modal confusion, the path to happiness, the process of enlightenment, acceptance of everything everywhere as it is, philosophy as therapy, mindfulness as the machinery of wisdom, overcoming struggles through practice, training the self to see the self, romance as a spirituality of love, finding happiness in community, simulation theory as nihilism, simulation theory as enlightenment, transcendence in the metaverse, transcendence in the flow state, uprooting paranoia, the root of anxiety, the purpose of human existence, methodology of self development, pain and suffering, peace and happiness, truth and the unknowable, definitions of reality, relational co-identification, what is insight
+
+ RESULTS: 
+ Qty per Category: 
+16,  truth and the unknowable,
+14,  the process of enlightenment,
+14,  mindfulness as the machinery of wisdom,
+11, guided practice making frame and breaking frame,
+9,  the inner self as experience,
+9,  training the self to see the self,
+9,  transcendence in the flow state,
+6,  phenomonological state of being,
+6,  philosophy as therapy,
+3,  uprooting paranoia,
+2,  the tragedy of modal confusion,
+2,  relational co-identification,
+1,  acceptance of everything everywhere as it is,
+1,  romance as a spirituality of love,
+1,  the purpose of human existence,
+1,  methodology of self development,
+1,  what is insight,
+0,  the path to happiness,
+0,  overcoming struggles through practice,
+0,  finding happiness in community,
+0,  simulation theory as nihilism,
+0,  simulation theory as enlightenment,
+0,  transcendence in the metaverse,
+0,  the root of anxiety,
+0,  pain and suffering,
+0,  peace and happiness,
+0,  definitions of reality,
+
+ 
+ 
+1
+00:00:00,000 --> 00:01:03,000
+     ~' what is insight'==0.8066529691294375% 
+insight is dialogical process between that participate don't not Insight. it happen perception. You participate way participate conversation. Socrates how theory way practicing reciprocal eidetic dialectic diologos.
+ 
+2
+00:01:04,000 --> 00:01:37,000
+     ~' truth and the unknowable'==0.8016426844043073% 
+how well the about no-thingness, non-propositional logos recursive realization. Now turn dimension Socrates' the practiced form Socrates dialogue,
+ 
+3
+00:01:37,000 --> 00:02:08,000
+     ~' mindfulness as the machinery of wisdom'==0.7822774913423427% 
+dialectic people, and dialectic. developed that. by ancient power for That's virtuosity And of sensibility, character.
+ 
+4
+00:02:12,000 --> 00:02:45,000
+     ~' philosophy as therapy'==0.7632504428188777% 
+find dialectic incoherent with preponderance connections that displayed dialogues Socrates repeatedly he I Phaedo.
+ 
+5
+00:02:46,000 --> 00:03:41,000
+     ~' transcendence in the flow state'==0.7857266014356897% 
+Socrates and that composing poetry. course about capacity trance. read excellent, Companion Socrates. Abolrapé Rakana to make clear think very so.
+ 
+6
+00:03:45,000 --> 00:04:28,000
+     ~' mindfulness as the machinery of wisdom'==0.8136457634237196% 
+wants is emphasize capacity capacity really about explanations fact snow suffering clear Socrates' body altered more think had meditative complete detachment sensory indeed self.
+ 
+7
+00:04:29,000 --> 00:04:59,000
+     ~' mindfulness as the machinery of wisdom'==0.7975883811302668% 
+just rational self-control what steel Vsenic is clear reviewing capacity profound, analogous to meditative emphasize article,
+ 
+8
+00:05:00,000 --> 00:05:42,000
+     ~' the inner self as experience'==0.806959285622511% 
+Experience, this recommend reading in Bloomsbury companion article Socrates' Experiences. they very focus recent looking what we is Socrates suprasophrasan.
+ 
+9
+00:05:44,000 --> 00:06:18,000
+     ~' transcendence in the flow state'==0.7782234610507136% 
+sophrasan? self-control, kratia temptation. being good. Socrates capacity absorbed temptation between being also McGee book, Spiritual length translation Sophocesne,
+ 
+10
+00:06:18,000 --> 00:06:58,000
+     ~' mindfulness as the machinery of wisdom'==0.8260766915974825% 
+often sounds sound-mindedness, better by notions mindfulness kinds can virtue excellence through mindfulness Socrates connection perhaps important dimension purposes notion dialectic is Socratic literature,
+ 
+11
+00:06:59,000 --> 00:08:08,000
+     ~' phenomonological state of being'==0.7642852234985831% 
+daimonion. for D-A-I-M-O-N-I-O-N, Gaemonion. do that that's issue because translated ways often Socrates characterizations. prominent that divine a within voice he sign significance that perspectival noticing salience do We sign recommend it perspectival perspective than present finds analogous seeing something,
+ 
+12
+00:08:08,000 --> 00:08:45,000
+     ~' training the self to see the self'==0.7991589849595501% 
+tracking, signs, voice. says this sign him, and familiar, indicates childhood, really it with, self-control. that allows practice sounds,
+ 
+13
+00:08:45,000 --> 00:09:23,000
+     ~' transcendence in the flow state'==0.7778129937002375% 
+already seer. seer able things. excellent but direct Phaedrus. This speaking. feeling, "'Just cross the divine came occurs,
+ 
+14
+00:09:23,000 --> 00:09:54,000
+     ~' philosophy as therapy'==0.7874992047658503% 
+back I'm sign. I It's interesting phenomenology. heard from made against effect particularly Socrates still enough purposes.
+ 
+15
+00:09:56,000 --> 00:10:26,000
+     ~' truth and the unknowable'==0.7780108472949931% 
+offense now. soul friend, language too, itself seer. Greek comes more biblical prophecy, that. why beginning I disturbed feeling. sign,
+ 
+16
+00:10:28,000 --> 00:10:58,000
+     ~' philosophy as therapy'==0.7954775524225758% 
+readily interpret supposed grasp significance understand notice going kind Greeks, Plato, Socrates, influenced there aspect divine, quandary.
+ 
+17
+00:11:02,000 --> 00:11:47,000
+     ~' the process of enlightenment'==0.7886873234429482% 
+rationality, sense logos, follow get why be Velázdos, wrote seminal probably important in Socratic Socrates' gravest difficulties to effort of the gravest difficulties.
+ 
+18
+00:11:48,000 --> 00:12:19,000
+     ~' truth and the unknowable'==0.7971444875051803% 
+there's here. such when we demonion all things is Socrates, primordial hero rationality, voices, us prototypical irrationality insanity.
+ 
+19
+00:12:22,000 --> 00:12:58,000
+     ~' uprooting paranoia'==0.7769370309609626% 
+two is Plato of companions followers disturbed it don't that mind. repeatedly noted want all attempts down talking conscience,
+ 
+20
+00:12:59,000 --> 00:13:30,000
+     ~' mindfulness as the machinery of wisdom'==0.793593489426873% 
+speech, careful scrutiny. attempt explain has are consistent dreams, trances, his such oracle him mission questioning people's wisdom.
+ 
+21
+00:13:32,000 --> 00:14:08,000
+     ~' the process of enlightenment'==0.8085228089164644% 
+So we can't away, we tempted write irrational. Well, so like he victim irrationality. Now voice modernity given by enlightenment, scientific et modernity in preserve the Socrates,
+ 
+22
+00:14:08,000 --> 00:14:40,000
+     ~' the process of enlightenment'==0.7742083928989597% 
+demonion. Socrates actually acting do he's this shift. compare rationality Socratic doing lengths. shift first, modern monological.
+ 
+23
+00:14:40,000 --> 00:15:21,000
+     ~' the process of enlightenment'==0.7769312653345299% 
+rationality treatise. monologue of leading conclusion. repeatedly, argued Socratic dialogical. extending dialogical dialogical modern monoepistemic. John, Monoepistemic there's non-propositional.
+ 
+24
+00:15:21,000 --> 00:16:05,000
+     ~' mindfulness as the machinery of wisdom'==0.7771783628983255% 
+Socratic rationality polyepistemic. There for rationality monophasic. mean? Rationality limited mind, consciousness. All altered, states away rationality afford rationality. indicated Socrates companions after not Socratic Socratic polyphasic.
+ 
+25
+00:16:06,000 --> 00:16:37,000
+     ~' transcendence in the flow state'==0.8054029395912273% 
+to states be propels, propels, causes capacity rational self-control mastery passions. rationality bound monad? monad completely self-enclosed unity.
+ 
+26
+00:16:40,000 --> 00:17:11,000
+     ~' training the self to see the self'==0.8032130070628701% 
+itself. is should autonomous. unified. given the going that's things now psychotherapy, science, Socratic is self. So,
+ 
+27
+00:17:13,000 --> 00:17:43,000
+     ~' phenomonological state of being'==0.7846281850319139% 
+worry that insane irrational from standpoint notion monological, computational, monoepistemic, monophasic, monadic, monadic shift to Socratic dialogical, polyepistemic, polyphasic,
+ 
+28
+00:17:45,000 --> 00:19:30,000
+     ~' truth and the unknowable'==0.7854131102567213% 
+well, we'll not hallmark irrationality, intricate kind Socrates this, start something and carefully complete part will entire start Blakowitz's Dialogue Soul direct reference thinking which just for deep article Blekowitz from excellent anthology called Gallagher Jonathan around seems talking variation monkey it dialogical,
+ 
+29
+00:19:31,000 --> 00:20:30,000
+     ~'guided practice making frame and breaking frame'==0.7626210006131987% 
+we have goes don't complete sentences, picks develops So instance where, I'll modify Ryle, along look you're gas gas might even stop you as combination of wordless and through shifting remembering.
+ 
+30
+00:20:31,000 --> 00:21:15,000
+     ~' the inner self as experience'==0.7834567417263086% 
+speech, actually vocalization, paired inner we're very multimodal Blakowitz, challenges deflationary called reflection reflecting metacognition, all reflect what's from Conversational duality apparent real.
+ 
+31
+00:21:16,000 --> 00:21:55,000
+     ~' training the self to see the self'==0.7879782057125515% 
+the self talking. speech monologue, not So speech, just the my Now, doesn't deny way consider where propose something propose ourselves.
+ 
+32
+00:21:57,000 --> 00:22:40,000
+     ~' truth and the unknowable'==0.7835453876100562% 
+ask may make proposal. And trying proposition of dialectic theologos. it Susan. that. say state quite convinced plausible,
+ 
+33
+00:22:40,000 --> 00:23:17,000
+     ~' the inner self as experience'==0.7782973099393824% 
+very answer, doing has different disposing the this will respond information present when stance Now, immediately very level inner challenging monologic,
+ 
+34
+00:23:17,000 --> 00:24:14,000
+     ~' mindfulness as the machinery of wisdom'==0.7648657565683799% 
+we're monologue, challenging monadic Because be parties to to ask that's any functionality? here's science, cognitive his go becoming in science arguments about challenging the speech So,
+ 
+35
+00:24:14,000 --> 00:24:48,000
+     ~' mindfulness as the machinery of wisdom'==0.7609085979301552% 
+Montague, Brain consequence is accepted within neuroscience. that the specialize types and is specialize So specialization.
+ 
+36
+00:24:48,000 --> 00:25:24,000
+     ~' mindfulness as the machinery of wisdom'==0.7588402054936129% 
+be I'm wrinkle, return Montague's proposes once possibility specialization efficiency two, think, can efficiency working purposes.
+ 
+37
+00:25:25,000 --> 00:25:58,000
+     ~' mindfulness as the machinery of wisdom'==0.7580448858340121% 
+areas undermining in other, we're very inefficient processing. that undeniable. Another of we by costs more cognitive cognitive notion Sperber notion profit,
+ 
+38
+00:25:58,000 --> 00:26:30,000
+     ~' the purpose of human existence'==0.7939585992370536% 
+say relevance, That our cognition efficient. both paradox assert true conflict, or other. notice reducing purposes. reduce cross think people work purposes,
+ 
+39
+00:26:30,000 --> 00:27:04,000
+     ~' transcendence in the flow state'==0.7492608321714663% 
+work possible, them have to communicate with increases metabolic metabolic I'm more That an metabolism, your you Well,
+ 
+40
+00:27:04,000 --> 00:27:44,000
+     ~' philosophy as therapy'==0.7794414502394277% 
+reduce metabolic way reducing problem communication, inefficiency cross communicate inefficiency extra the solution dialogical solution. gives says imagine happily couple he noticed telepathy?
+ 
+41
+00:27:45,000 --> 00:28:19,000
+     ~' the tragedy of modal confusion'==0.7611498706799273% 
+read really communicate little. happen? happens use just kind or here. model of generative model of something.
+ 
+42
+00:28:19,000 --> 00:28:50,000
+     ~' truth and the unknowable'==0.7588913187652453% 
+model generates what predictions something literally man Agnes, ask, Agnes And generates prediction of often Agnes notion is course,
+ 
+43
+00:28:52,000 --> 00:29:43,000
+     ~' relational co-identification'==0.7567713033057598% 
+Steve, means lot behavior, they internal models, behavior coordinated. communication coordination have modeling mutually each this proposal. His areas mutually So see areas each the sight hearing,
+ 
+44
+00:29:44,000 --> 00:30:19,000
+     ~' the tragedy of modal confusion'==0.7755554739846392% 
+only they're this very interesting cognition. example, the that modality some you picture and rapidly names corresponds Okay,
+ 
+45
+00:30:21,000 --> 00:30:52,000
+     ~' truth and the unknowable'==0.7498325741558778% 
+and Notice point as 95% population something between bleeding natural to these modeling their other.
+ 
+46
+00:30:57,000 --> 00:31:56,000
+     ~' the inner self as experience'==0.7549300345124641% 
+was so echolocation. This over, sounds, world Now, Boy. reasons, Batman. he reports auditory quasi-visual experience by his for you your It been back grid that stimulation.
+ 
+47
+00:31:58,000 --> 00:32:40,000
+     ~' training the self to see the self'==0.7627742827560309% 
+what picture and stimulate initially feel sensations. stimulation say, sort belt abdomen, it according first stop feeling and sense oriented to of evidence,
+ 
+48
+00:32:40,000 --> 00:33:12,000
+     ~' mindfulness as the machinery of wisdom'==0.7952320305102191% 
+also brain each metaphor talking idea is doing something that pantomimes actions understand completely Golden body that cognition.
+ 
+49
+00:33:18,000 --> 00:33:48,000
+     ~' uprooting paranoia'==0.7600180311848755% 
+could another evidence prominent, again mutual this Miguel very left right back about people,
+ 
+50
+00:33:49,000 --> 00:34:26,000
+     ~' phenomonological state of being'==0.7478350009127812% 
+talk specialization, But lateralization less people who they both the into Nevertheless, way discussion sort proposed work converge, hemisphere evolved deal well-defined in state,
+ 
+51
+00:34:26,000 --> 00:34:59,000
+     ~' phenomonological state of being'==0.7601476255016062% 
+state, the should the feedback getting, propose good is 23 in what is, multiplication the operations results Well-defined if confronting problem,
+ 
+52
+00:34:59,000 --> 00:35:30,000
+     ~' methodology of self development'==0.7748166248549662% 
+your adjustments behavior things step-by-step moment, account detailed to important between well-defined and to another problems. your state, do,
+ 
+53
+00:35:32,000 --> 00:36:02,000
+     ~' truth and the unknowable'==0.749643535678381% 
+feedback clear Classic ill-defined go first initial strangers. of talk. About Well, Maybe, look much. know, at
+ 
+54
+00:36:04,000 --> 00:36:39,000
+     ~' philosophy as therapy'==0.7672357571031125% 
+like gosh, like going, it, life's actually problems. What can problem then idea hemisphere evolved for well-defined Step-by-step,
+ 
+55
+00:36:39,000 --> 00:37:11,000
+     ~' phenomonological state of being'==0.7907828350178864% 
+detailed, Think food. doing? doing. state's It me right? clear step-by-step. hemisphere for ill-defined swooping is all gestalt.
+ 
+56
+00:37:14,000 --> 00:38:04,000
+     ~' truth and the unknowable'==0.7742394194215595% 
+You're need clarity. gonna I'm clear eagle unexpected What's of classic right charge, ill-defined, served has course contributed our situation contributed the very you live propositional step-by-step,
+ 
+57
+00:38:04,000 --> 00:38:34,000
+     ~' the process of enlightenment'==0.7695270246223147% 
+tyranny. computational So, well, relationship processing because move and your different So processing hemisphere,
+ 
+58
+00:38:35,000 --> 00:39:33,000
+     ~' the process of enlightenment'==0.7955474898135075% 
+you're clarity, certainty, step-by-step attention trying gestalt do in coordinated together away swooping Because two need move between important already attention processing relevance moment talked aha wanna to also nine Insight.
+ 
+59
+00:39:33,000 --> 00:40:05,000
+     ~' the process of enlightenment'==0.7727948621044858% 
+book Eureka Aha Insights John Mark Really important ideas is, occurs, encounter dot and is think familiar,
+ 
+60
+00:40:05,000 --> 00:40:36,000
+     ~'guided practice making frame and breaking frame'==0.7781494519664314% 
+well-defined this dot square, do threat. shifts hemisphere hemisphere. you're solution, you're way where attention and framing,
+ 
+61
+00:40:39,000 --> 00:41:09,000
+     ~' the process of enlightenment'==0.7938379793138041% 
+reframe framed, well-defined solve insight is dialogical process between hemispheres that participate not Insight. it happen perception.
+ 
+62
+00:41:10,000 --> 00:41:48,000
+     ~' the inner self as experience'==0.7900351149532213% 
+participate participate conversation. And if phenomenology, can yourself one well-defined hemispheric, go open exploring and frame looking frames looking within something really work Dixon in 2009,
+ 
+63
+00:41:48,000 --> 00:42:27,000
+     ~'guided practice making frame and breaking frame'==0.7918383762781738% 
+series can insight environment, a dump staticky it, chance insight. say, this noise? frame and over-fitted means idea.
+ 
+64
+00:42:28,000 --> 00:43:16,000
+     ~'guided practice making frame and breaking frame'==0.7815709245769427% 
+patterns your think generalize entire of stimuli off dot ones fitted cannot your break disrupt break allows allows important information that correctly generalizes problem prevent Stefan use self-organizing criticality.
+ 
+65
+00:43:16,000 --> 00:43:46,000
+     ~'guided practice making frame and breaking frame'==0.7522522872089091% 
+This from sand self-organizes becomes It fall avalanches. But actually base So friction, places catch of deeper, base,
+ 
+66
+00:43:47,000 --> 00:44:24,000
+     ~' the process of enlightenment'==0.7750472391453797% 
+reorganizes and than happening ordered then disordered, allows that's when criticality process system, goes not that self-organizing dynamics dialectic,
+ 
+67
+00:44:24,000 --> 00:44:58,000
+     ~' the process of enlightenment'==0.7689803723805626% 
+dialogue between hemispheres, problem formulation Okay. Now that means. means important role disruption aporia within process participants structure critical.
+ 
+68
+00:44:58,000 --> 00:45:51,000
+     ~' training the self to see the self'==0.8118710723362198% 
+can apart stabilizes insight realization. Okay, notion self-organizing Our is, about realization evolving, selective building critical variation constantly our fittedness Let's mutual opponent processing modeling brain other trade Now dialogical analogy.
+ 
+69
+00:45:51,000 --> 00:46:30,000
+     ~' training the self to see the self'==0.7444305364276178% 
+husband never generative progressively talk generative needed. isn't this I've need these opponent fashion. need time where independently, talking even places generative mutual coordinate also another back,
+ 
+70
+00:46:31,000 --> 00:47:20,000
+     ~' training the self to see the self'==0.7847197760519267% 
+with and models reality. do we toggle between task-focused, are world, default which wandering away. wandering self-referential. does the mode to parts actually modeling the alternate we're attention mind variation,
+ 
+71
+00:47:21,000 --> 00:47:51,000
+     ~' the process of enlightenment'==0.7770411905203004% 
+Another evidence the mildly distracted from that to insight. that moving doing variation. introduces valuable helps inappropriate we the et happening this,
+ 
+72
+00:47:52,000 --> 00:48:22,000
+     ~' the process of enlightenment'==0.753825427946729% 
+course. What's these processing. goes articulate meaning. it's into processes. meaning.
+ 
+73
+00:48:26,000 --> 00:48:57,000
+     ~' phenomonological state of being'==0.7530653263964184% 
+statement he example somebody has between two presences. perspective Because perspective, activated, from perspective. perspective articulation.
+ 
+74
+00:48:58,000 --> 00:49:33,000
+     ~' truth and the unknowable'==0.7429887409401077% 
+lines or lines really, trying creative something, do go another meaning, but syntactic? much? to syntactic semantic has intelligible So modify then that.
+ 
+75
+00:49:36,000 --> 00:50:13,000
+     ~' the inner self as experience'==0.795299326797807% 
+starts way, is experience this constant dialogical between perspectives present. relationship trying surprise, senses surprise creating conveying confirmation,
+ 
+76
+00:50:13,000 --> 00:50:58,000
+     ~' truth and the unknowable'==0.7808278292111702% 
+getting enough that sound also poem. grain heaven hold got got opponent with relationship to the realization,
+ 
+77
+00:50:58,000 --> 00:51:40,000
+     ~' the inner self as experience'==0.807251415237152% 
+order afford insight, order implement self-organizing criticality. notice phenomenology I There's this literature self, to, difference place I'm looking which future time when actually outside realm familiarity,
+ 
+78
+00:51:40,000 --> 00:52:47,000
+     ~' training the self to see the self'==0.7811176290813803% 
+I okay, this basically within and shining you, the Then move position and shining perspective where present and back doing aspectual perspectival And flipping the means also between back into processing relevance engage enact doing internal we're that,
+ 
+79
+00:52:47,000 --> 00:53:20,000
+     ~' relational co-identification'==0.7871402312677992% 
+tap mutual one that the they being largely independently each gather brought coordinated communication. Blakowitz reciprocal correction.
+ 
+80
+00:53:27,000 --> 00:54:04,000
+     ~' truth and the unknowable'==0.7385236928398654% 
+articulation meaning. Poetry of that nevertheless word Aardvark, porcupine, Africa, whales, That's just intercoherence. straight bound have between Pataksu.
+ 
+81
+00:54:08,000 --> 00:54:38,000
+     ~' transcendence in the flow state'==0.8007944163381369% 
+dialogical activation opponent processing drives fits can sand. finite transcendence dialogic.
+ 
+82
+00:54:40,000 --> 00:55:20,000
+     ~' transcendence in the flow state'==0.8191492414321655% 
+beyond to transcend still finite. do prescient this before writes Emissary, discusses evidence time lateralization way Foreshadows that that notion internalization.
+ 
+83
+00:55:20,000 --> 00:56:00,000
+     ~' the process of enlightenment'==0.7887447519540366% 
+internalize perspectives internalize dialogue internalize Diologos dialogue becomes evolution co-created emergence articulation Internalizing dialogic powerful because, more see Mercier Enigma gather all when tasks usually,
+ 
+84
+00:56:01,000 --> 00:56:39,000
+     ~' transcendence in the flow state'==0.7731684189886485% 
+significantly outperform we reasoning individuals. Why? Because are prey that recursive realization. But people other presencing us challenging to each overcome intelligence distributed that supersedes aggregation summation the intelligence the people.
+ 
+85
+00:56:44,000 --> 00:57:14,000
+     ~' the process of enlightenment'==0.7656181019602265% 
+Once move dialogical the dialogical see Socratic demonion necessarily or irrational we finished,
+ 
+86
+00:57:16,000 --> 00:57:55,000
+     ~'guided practice making frame and breaking frame'==0.7904930618453913% 
+argument, take some ponder we'll practice. Point dialogue of his challenge make shift. Rather framework label irrational, way modern rationality,
+ 
+87
+00:57:55,000 --> 00:58:31,000
+     ~' mindfulness as the machinery of wisdom'==0.7931278104717033% 
+already so Socratic you central dialectic dialogueos. to practice believe practice experience that that to monological mind,
+ 
+88
+00:58:36,000 --> 00:59:07,000
+     ~' philosophy as therapy'==0.8037517688917011% 
+means outside an practices. There panacea because intervening Another talking inner extending dimension dialectic. above contemplatively,
+ 
+89
+00:59:08,000 --> 01:00:16,000
+     ~'guided practice making frame and breaking frame'==0.7838079596499825% 
+within own episode the program which do engineering mistake we argument thing. So reverse the the program practice that dialogical framework this every be together engineering,
+ 
+90
+01:00:19,000 --> 01:00:49,000
+     ~'guided practice making frame and breaking frame'==0.8237299598646078% 
+sort practices you variations scaffolding do times sense different of little misnomer me to practice.
+ 
+91
+01:00:52,000 --> 01:01:24,000
+     ~' mindfulness as the machinery of wisdom'==0.806736902572034% 
+when the contemplation, wisdom. similar function, it's differently more addressed towards this been episode, the ask curiosity,
+ 
+92
+01:01:24,000 --> 01:02:31,000
+     ~' truth and the unknowable'==0.8013408245673491% 
+and hole and thing motivator filling knowledge I'm disparage ask curiosity. ask framework if deep We're asking because we've discovered our wonder deepen go and so gripping questioning.
+ 
+93
+01:02:33,000 --> 01:03:05,000
+     ~' truth and the unknowable'==0.7689481805604058% 
+play connection questioning questing. not way transform meaning go that that theoria, eventually a propositional replaced ordering.
+ 
+94
+01:03:06,000 --> 01:04:36,000
+     ~'guided practice making frame and breaking frame'==0.7746680656328565% 
+good because and I lost bargain, recover as quest. question specifically designed cannot the curiosity, the framework framework thrown It's described swallowing ball way drops questions designed trigger curiosity have you becoming who similar things Sufi teaching them undermine flip narrative drop Socratic style same parable.
+ 
+95
+01:04:37,000 --> 01:05:09,000
+     ~' truth and the unknowable'==0.7733877677534935% 
+anybody gives parable parable parables get think then unwraps and state question, kind that question,
+ 
+96
+01:05:11,000 --> 01:05:42,000
+     ~'guided practice making frame and breaking frame'==0.7770814408669052% 
+up, reciprocal opening. designed designed yourself question, especially presuppositions that to modernity, and the make very centered,
+ 
+97
+01:05:44,000 --> 01:06:14,000
+     ~'guided practice making frame and breaking frame'==0.7736201505402829% 
+through exercise prepared. you're you're going question. ask ask are positions going ask like head Who answers you'll bit,
+ 
+98
+01:06:18,000 --> 01:06:57,000
+     ~' transcendence in the flow state'==0.755165889885568% 
+Any gratitude I? come behind Use throwing answer pass It rounds maybe hold back positioning come float feelings,
+ 
+99
+01:06:57,000 --> 01:07:28,000
+     ~' the inner self as experience'==0.7731099467478959% 
+emotions, what motivation, inchoate instead, very focusing, propose, you're what this? it Gendlin focusing,
+ 
+100
+01:07:28,000 --> 01:08:00,000
+     ~' uprooting paranoia'==0.7560641433474939% 
+shift, Keep another part those here's here's from part the parts guts,
+ 
+101
+01:08:00,000 --> 01:08:44,000
+     ~' training the self to see the self'==0.7670430395938606% 
+lots neurons In what's comes now labeling propose you heart, in you now do Until with I Practice until resolve.
+ 
+102
+01:08:48,000 --> 01:09:22,000
+     ~' mindfulness as the machinery of wisdom'==0.8012473558612376% 
+appreciate through thing where mental I heart, doing focusing, answer.
+ 
+103
+01:09:24,000 --> 01:09:54,000
+     ~' truth and the unknowable'==0.7734875525111022% 
+the line. Appreciate sense understanding But portal. come answers from? What go behind time. So, deeper. to
+ 
+104
+01:10:00,000 --> 01:10:32,000
+     ~' the inner self as experience'==0.7956307769190214% 
+here uncanny. emotions, the Shout remember you've realized, appreciate understand have arrived your quest. slowly practice,
+ 
+105
+01:10:33,000 --> 01:11:04,000
+     ~' acceptance of everything everywhere as it is'==0.7992004499015539% 
+as integrate cultivated everyday Let challenge the modern possibility shift. commitment. So attention.
+ 
+106
+01:11:07,000 --> 01:11:33,000
+     ~' romance as a spirituality of love'==0.772325257966552% 
+wanders balanced over-involved or an grip basically ratio religio oriented, religio oriented whole synoptic about the
+ 
