@@ -18,7 +18,7 @@ philosophy-of-meditation-vervaeke.m4a + query.txt =>
 0  doing
 0  overcoming
 
-## categorized_.srt
+categorized_.srt
 1
 00:00:00,000 --> 00:00:50,000
     == ' finding happiness in community', %0.7957220610350229
