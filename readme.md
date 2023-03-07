@@ -1,14 +1,14 @@
 # Coded Transcripts from .m4a and category prompts
 ## for qualitative research using large quantities of audio
 
-This Python script attempts to automate the qualitative research process by parsing audio interview transcripts for embeddings and comparing their distances with a list of user-defined prompts, to determine the most relevant research codes for trend analysis. 
-
-There is an error rate on autotranscribe that could be improved with the Whisper API, or locally with 10gb vram in the 'large' model.
+This Python script attempts to automate the qualitative research process by parsing audio interview transcripts for embeddings and comparing each subtitle similarity with a list of user-defined prompt embeddings. This should determine the most relevant research codes for trend analysis. 
 
 .m4a audio files are auto-transcribed with Whisper, each subtitle text-embedding is scored by similarity to a list of user-defined prompts, and every spoken sentence is categorized in the resulting .SRT file. The ADA-002-Embedding AI model seems quite accurate with short phrases but the output will need human verification for accuracy.
 
 See example podcast output: ![]()
 https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
+
+Note there is an error rate on autotranscribe that could be improved with the Whisper large v2 model via API, or locally with 10gb vram for 'large' model.
 
 ### Methodology:
 
