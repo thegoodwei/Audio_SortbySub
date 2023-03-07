@@ -8,12 +8,12 @@ This Python script attempts to automate the research process for interview trans
 
 The ADA-002-Embedding AI model seems quite accurate with short phrases but could be derailed by autotranscribe, so the output will need human verification for accuracy. 
 
-See example podcast output: ![](/example/philosophy-of-meditation-vervaeke.txt)
+See example podcast output: ![]()
 https://github.com/thegoodwei/Audio_SortbySub/blob/main/example/philosophy-of-meditation-vervaeke.txt
 
 Instructions below
 
-![icon](icon.svg)
+![/example/philosophy-of-meditation-vervaeke.txt](icon.svg)
 
 ### Methodology:
 Our approach involves several steps:
