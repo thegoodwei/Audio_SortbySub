@@ -312,6 +312,83 @@ def get_embeddings(srt_file, db_file):
     print(" ...")
 
 
+def find_new_codes(srt_file):
+    print("Long summary has begun! \n \n Try this \n \n")
+    f = open(srt_file,"r")
+    srt_text = f.read()
+    f.close()
+    print(srt_file)
+    subtitles = srt.parse(srt_text)
+    # Parse the subtitles into list format
+    # combine subs does not work???
+    subtitlescontent = ""
+    for sub in subtitles:
+        subtitlescontent += sub.content
+        # Insert into the database
+    transcript = subtitlescontent #py_transcribed if use above
+    print(transcript)
+    # Segment size for sub-summarization. Default is 5 minutes. For videos with a lot of people speaking at once, or videos where the speaker(s) speak especially fast, you may want to reduce this.
+    segment_size = 200000
+
+    print("Before feeding the array to the array we do \\n")
+    end_chars = ".?!,"
+    # Convert the transcript list object to plaintext so that we can use it with OpenAI
+    transcript_segments = [[]]
+    seg = ""
+    transcript_index = 0
+    last_cutoff = 0
+    seglength = 0
+    print("begin for line in transcript within researchcode summary")
+    for line in transcript:
+        # Add this line's text to the current transcript segment
+        transcript_segments[transcript_index].append(line)
+        for i in range(len(transcript_segments[transcript_index])):
+            seg = ""
+            lineseg = transcript_segments[transcript_index][i] #Line segment at this index,   #len(linesegs)
+            seglength += len(lineseg.split()) #add the total len(linesegs) for your length
+
+        # If this line is more than segment_size seconds after the last cutoff, then we need to create a new segment
+        if (((seglength) > segment_size) and ((lineseg[-3:] in end_chars) )):#or (seglength>(1.5*segment_size))
+            #print("seglength: ", seglength, " transcript_index ", transcript_index)
+            transcript_index += 1
+            transcript_segments.append([])
+            #last_cutoff = int(seglength)
+            seglength = 1
+        #print("last_cutoff now = ", last_cutoff)
+    transegs = []
+    for i in range(len(transcript_segments)):
+        transcript_segments[i] = "".join(transcript_segments[i])
+            # For each segment of the transcript, summarize
+    transcript_segment_summaries = ""
+    conversation = []
+    j=0
+    conversation.append({'role': 'system', 'content':'Briefly revise each of the following subtitles into a simplified, concise research phrase: \n'}) #+ transcript_segments[j]
+    for i in range(len(transcript_segments)):
+        transcript_segment = transcript_segments[i]
+        print(transcript_segment) #TODO #WHY THEY ALL HAVE SPACES BETWEEN WORDS
+        # Use the OpenAI Completion endpoint to summarize the transcript
+        #model_id="gpt-3.5-turbo",
+        conversation.append({'role': 'user', 'content': transcript_segment + ","})
+        response  = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages= conversation,   #consise 
+            #"Completely summarize the following text:\n"+transcript_segment +" \n",
+            temperature=0.0,
+            max_tokens=8,
+            top_p=1,
+            frequency_penalty=2,
+            presence_penalty=-2,
+        )
+        newcode=(response.choices[-1].message.content)
+        if ( ("orry" in newcode) or ("text" in newcode) or ("ummerize" in newcode) or ("esearch" in newcode) or ("schedule" in newcode) or ("Okay" in newcode)) or (len(str(newcode))<10):
+            print("bad code!")
+            print(newcode)
+        else:
+            transegs.append(response.choices[-1].message.content)
+            transcript_segment_summaries += str(","+response.choices[-1].message.content) 
+    return(transcript_segment_summaries)
+# Split the input string into a list of values using the csv module
+
 #def get_categories(input_string):
 def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
     """
@@ -357,12 +434,11 @@ def get_categories(input_string: str) -> list[tuple[str, list[float]]]:
 
     return category_embeddings
 
-    
-# Split the input string into a list of values using the csv module
+
 
 #note, categories is an array of tuples [(category, embedding)]
 #def categorize(srt_file, categories, output_path, dbfile):
-def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_path: str, db_file: str) -> str:
+def categorize_codes(srt_file: str, categories: list[tuple[str, list[float]]], output_path: str, db_file: str) -> str:
     """
     Categorizes the subtitles in the specified srt_file into the provided categories and writes the output to an srt file.
 
@@ -468,15 +544,16 @@ def categorize(srt_file: str, categories: list[tuple[str, list[float]]], output_
 
 
 def m4a_to_srt_categorized(input_file, input_string, output_file):
-  transcribed_subtitles = setup(input_file)
-  print(transcribed_subtitles)
-  print("getting embeddings for categories: " + input_string)
-  categories = get_categories(input_string)
-  categorize(transcribed_subtitles, categories, output_file, db_file)
+  srt = setup(input_file)
+  print(srt)
+  newcodes=find_new_codes(srt)
+  print("getting embeddings for categories: ", newcodes, "\n\n", input_string)
+  categories = get_categories(str(newcodes + input_string))
+  categorize_codes(srt, categories, output_file, db_file)
 
 
 if __name__ == "__main__":
-  output_file = "categorized_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
+  output_file = "AIcoded_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
   m4a_to_srt_categorized(input_file, input_string, output_file)
 #batch
 #   counter = 0
