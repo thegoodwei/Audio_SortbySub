@@ -14,6 +14,8 @@ libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo wget zlib1g-dev
 sudo apt update && sudo apt install ffmpeg
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+git lfs install
+git clone https://huggingface.co/pyannote/speaker-diarization
 
 mono csharp shell
 
