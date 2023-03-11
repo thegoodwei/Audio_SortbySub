@@ -552,6 +552,64 @@ def m4a_to_srt_categorized(input_file, input_string, output_file):
   categorize_codes(srt, categories, output_file, db_file)
 
 
+
+def revise_categories(srt_file, new_file, db_file):
+    categories = fetch_embedded_categories(db_file)
+    for cat,embed in categories:
+        print(cat)
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    catdeletions=input("DELETE ANY CATEGORIES?")
+    c.execute("DELETE FROM categories WHERE category = ?", (catdeletions,))
+    conn.commit()
+    categories = fetch_embedded_categories(db_file)
+    for cat,embed in categories:
+        print(cat)
+    categorize_codes(srt_file, categories, new_file, db_file)
+
+
+def fetch_embedded_subs(srt_file, db_file):
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the subtitles from the database
+    c.execute("SELECT start,end,text,embeddings FROM subtitles WHERE srt_file = ? AND embeddings != 'None'", (srt_file,))
+    subtitles = c.fetchall()
+    # Get the text of the subtitles
+    return subtitles
+def fetch_embedded_categories(db_file):
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the categories from the database
+    c.execute("SELECT category,category_embedding FROM categories")
+    categories = c.fetchall()
+    # Get the text of the subtitles
+    with open("categories.csv", "w+") as f:
+        for text, emb in categories:
+         writer = csv.writer(f)
+         writer.writerow(text)
+    f.close()
+    return categories
+
+def fetch_all_subs(db_file):
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the subtitles from the database
+    c.execute("SELECT start,end,text,embeddings FROM subtitles")
+    subtitles = c.fetchall()
+    # Get the text of the subtitles
+    return subtitles
+def fetch_category_counts(db_file):
+    conn = sqlite3.connect(db_file)
+    c = conn.cursor()
+    # Get the subtitles from the database
+    # Execute SQL query to get count of each category
+    c.execute('SELECT Category, COUNT(*) FROM table_name GROUP BY Category')
+    # Fetch all results and store in list of tuples
+    category_counts = sorted(c.fetchall(), key=lambda x: x[1], reverse=True)
+    print(str(category_counts))
+    return category_counts
+
+
 if __name__ == "__main__":
   output_file = "AIcoded_" + os.path.splitext(os.path.basename(input_file))[0] + ".srt"
   m4a_to_srt_categorized(input_file, input_string, output_file)
